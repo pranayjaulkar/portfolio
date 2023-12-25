@@ -32,12 +32,14 @@ export default function Home() {
             Hi, I&apos;m Pranay. Nice to meet you
           </h3>
           <p className="text-[#ffffff] text-xl mt-8 max-w-[47rem] text-center">
-            Since beginning my journey as a freelance designer over 11 years
-            ago, I&apos;ve done remote work for agencies, consulted for
-            startups, and collaborated with talented people to create digital
-            products for both business and consumer use. I&apos;m quietly
-            confident, naturally curious, and perpetually working on improving
-            my chops one design problem at a time.
+            I&apos;m a self-taught web developer with experience in designing
+            new features from ideation to production, implementation of
+            wireframes and design flows into high performance software
+            applications. I take into consideration the user experience while
+            writing reusable and efficient code. I passionately combine good
+            design, technology, and innovation in all my projects, which I like
+            to accompany from the first idea to release. Currently, I&apos;m
+            focused on the backend development.
           </p>
         </div>
       </section>
