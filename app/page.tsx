@@ -47,6 +47,14 @@ export default function Home() {
       <section>
         <SkillSection />
       </section>
+      <section>
+        <div className="w-50 h-[100px]"></div>
+        <div className="w-50 h-[100px]"></div>
+        <div className="w-50 h-[100px]"></div>
+        <div className="w-50 h-[100px]"></div>
+        <div className="w-50 h-[100px]"></div>
+        <div className="w-50 h-[100px]"></div>
+      </section>
     </main>
   );
 }
