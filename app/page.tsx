@@ -45,7 +45,9 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <SkillSection />
+        <div className="py-20">
+          <SkillSection />
+        </div>
       </section>
       <section>
         <div className="w-50 h-[100px]"></div>

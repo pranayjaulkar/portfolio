@@ -13,6 +13,8 @@ import BootstrapIcon from "./icons/bootstrap-icon.svg";
 import TailwindIcon from "./icons/tailwind-icon.svg";
 import TypescriptIcon from "./icons/typescript-icon.svg";
 import JavascriptIcon from "./icons/javascript-icon.svg";
+import CppIcon from "./icons/cpp-icon.svg";
+import GitIcon from "./icons/git-icon.svg";
 
 import Image from "next/image";
 interface SkillSectionProps {}
@@ -49,6 +51,10 @@ export const SkillSection: React.FC<SkillSectionProps> = () => {
     },
 
     {
+      icon: CppIcon,
+      name: "C/C++",
+    },
+    {
       icon: PythonIcon,
       name: "Python",
     },
@@ -60,14 +66,17 @@ export const SkillSection: React.FC<SkillSectionProps> = () => {
       icon: TypescriptIcon,
       name: "Typescript",
     },
-
+    {
+      icon: GitIcon,
+      name: "Git/Github",
+    },
     {
       icon: BootstrapIcon,
       name: "Bootstrap",
     },
     {
       icon: TailwindIcon,
-      name: "Tailwind",
+      name: "Tailwind CSS",
     },
     {
       icon: HtmlIcon,
@@ -79,7 +88,7 @@ export const SkillSection: React.FC<SkillSectionProps> = () => {
     },
   ];
   return (
-    <div className="max-w-[75%] md:max-w-[65%] xl:max-w-[55%] mx-auto py-12">
+    <div className="max-w-[75%] md:max-w-[65%] xl:max-w-[55%] mx-auto">
       <div className="grid grid-cols-3 grid-rows-5 md:grid-cols-4 md:grid-rows-4 lg:grid-cols-5 lg:grid-rows-3 xl:grid-cols-7 xl:grid-rows-5  gap-x-4 gap-y-8 justify-items-center">
         {skills.map((skill) => (
           <div
