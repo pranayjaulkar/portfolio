@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import AvatarIcon from "@/components/icons/avatar.svg";
 import DevicesImage from "@/components/images/hero-devices.svg";
+import SkillSection from "@/components/SkillSection";
 
 export default function Home() {
   return (
@@ -28,10 +29,10 @@ export default function Home() {
       </section>{" "}
       <section>
         <div className="bg-primary p-20 flex justify-center flex-col items-center">
-          <h3 className="text-[#ffffff] text-3xl font-bold">
+          <h3 className="text-white text-3xl font-bold">
             Hi, I&apos;m Pranay. Nice to meet you
           </h3>
-          <p className="text-[#ffffff] text-xl mt-8 max-w-[47rem] text-center">
+          <p className="text-white text-xl mt-8 max-w-[47rem] text-center">
             I&apos;m a self-taught web developer with experience in designing
             new features from ideation to production, implementation of
             wireframes and design flows into high performance software
@@ -42,6 +43,9 @@ export default function Home() {
             focused on the backend development.
           </p>
         </div>
+      </section>
+      <section>
+        <SkillSection />
       </section>
     </main>
   );
