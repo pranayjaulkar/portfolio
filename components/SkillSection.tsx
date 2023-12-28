@@ -89,11 +89,24 @@ export const SkillSection: React.FC<SkillSectionProps> = () => {
   ];
   return (
     <div className="max-w-[75%] md:max-w-[65%] xl:max-w-[55%] mx-auto">
-      <div className="grid grid-cols-3 grid-rows-5 md:grid-cols-4 md:grid-rows-4 lg:grid-cols-5 lg:grid-rows-3 xl:grid-cols-7 xl:grid-rows-5  gap-x-4 gap-y-8 justify-items-center">
+      <h3 className="flex justify-center items-center text-2xl md:text-3xl text-primary font-bold mb-16">
+        Technologies and Tools
+      </h3>
+      <div
+        className="
+      grid 
+      grid-cols-3 
+      md:grid-cols-4 
+      lg:grid-cols-5 
+      xl:grid-cols-6
+      gap-x-8 
+      gap-y-12 
+      justify-items-center"
+      >
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="space-y-4 flex flex-col items-center justify-between"
+            className="space-y-4 flex flex-col items-center justify-between "
           >
             <div className="w-20 flex justify-center grow">
               <Image

@@ -1,44 +1,32 @@
 "use client";
-import GithubIcon from "@/components/icons/github-icon.svg";
-import TwitterIcon from "@/components/icons/twitter-icon.svg"
-import LinkedinIcon from "@/components/icons/linkedin-icon.svg";
-import InstagramIcon from "@/components/icons/instagram-icon.svg";
-import Image from "next/image";
-
+import GithubIconLight from "@/components/icons/github-icon-light";
+import TwitterIcon from "@/components/icons/twitter-icon-light";
+import LinkedinIcon from "@/components/icons/linkedin-icon-light";
+import InstagramIcon from "@/components/icons/instagram-icon-light";
 interface NavbarProps {}
 
 export const Navbar: React.FC<NavbarProps> = () => {
   return (
     <nav className="flex justify-between items-center my-12 mx-auto max-w-[90%]  md:max-w-[75%] xl:max-w-[60%] ">
-      <span className="font-bold text-xl md:text-3xl text-primary">Pranay Jaulkar</span>
+      <span className="font-bold text-xl md:text-3xl text-primary">
+        Pranay Jaulkar
+      </span>
       <div className=" flex space-x-4 justify-center items-center">
-        <Image
-          className="cursor-pointer  text-primary"
-          src={GithubIcon}
-          alt=""
+        <GithubIconLight
+          className=" fill-primary hover:fill-secondary"
           width={25}
-          height={25}
         />
-        <Image
-          className="cursor-pointer  text-primary"
-          src={TwitterIcon}
-          alt=""
+        <TwitterIcon
+          className=" fill-primary hover:fill-secondary"
           width={25}
-          height={25}
         />
-        <Image
-          className="cursor-pointer  text-primary"
-          src={LinkedinIcon}
-          alt=""
+        <LinkedinIcon
+          className=" fill-primary hover:fill-secondary"
           width={25}
-          height={25}
         />
-        <Image
-          className="cursor-pointer text-primary"
-          src={InstagramIcon}
-          alt=""
+        <InstagramIcon
           width={25}
-          height={25}
+          className=" fill-primary hover:fill-secondary"
         />
       </div>
     </nav>
