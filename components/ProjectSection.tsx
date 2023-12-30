@@ -9,6 +9,8 @@ export const ProjectSection: React.FC<ProjectSectionProps> = () => {
       description:
         "Yelpcamp is a social media website.adhgd aslkfh sfglhknsmgfdkhnsfgjkhncfsvjkbncjksvnbcxvnbncxvbncvbncvbncvxbjcxvbjkcsvbjkscnvjknb",
       image: "",
+      inDevelopment: false,
+      domain: "yelpcamp-project-dmx9.onrender.com",
       technologies: [
         "ExpressJS",
         "NodeJS",
@@ -28,6 +30,8 @@ export const ProjectSection: React.FC<ProjectSectionProps> = () => {
       description:
         "Memories is a social media website.adhgd aslkfh sfglhknsmgfdkhnsfgjkhncfsvjkbncjksvnbcxvnbncxvbncvbncvbncvxbjcxvbjkcsvbjkscnvjknb",
       image: "",
+      inDevelopment: false,
+      domain: "memories-lyng.onrender.com",
       technologies: [
         "ReactJS",
         "ExpressJS",
@@ -41,6 +45,28 @@ export const ProjectSection: React.FC<ProjectSectionProps> = () => {
         "JWT",
       ],
       githubUrl: "https://github.com/pranayjaulkar/Memories-MERN/",
+      projectUrl: "https://memories-lyng.onrender.com",
+    },
+    {
+      title: "Zest",
+      description:
+        "Zest is a ecommerce website.adhgd aslkfh sfglhknsmgfdkhnsfgjkhncfsvjkbncjksvnbcxvnbncxvbncvbncvbncvxbjcxvbjkcsvbjkscnvjknb",
+      image: "",
+      inDevelopment: true,
+      domain: "memories-lyng.onrender.com",
+      technologies: [
+        "ReactJS",
+        "ExpressJS",
+        "NodeJS",
+        "Mongodb",
+        "Mongoose",
+        "Material UI",
+        "Tailwind CSS",
+        "JOI",
+        "Cloudinary",
+        "JWT",
+      ],
+      githubUrl: "https://github.com/pranayjaulkar/ecommerce-website/",
       projectUrl: "https://memories-lyng.onrender.com",
     },
   ];

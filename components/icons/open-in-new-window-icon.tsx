@@ -16,7 +16,7 @@ export default function GithubLightIcon({
       className={className}
     >
       <g
-        fill="#ffffff"
+        fill={fill}
         fill-rule="nonzero"
         stroke="none"
         stroke-width="1"

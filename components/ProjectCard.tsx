@@ -3,20 +3,25 @@ interface ColumnCardProps {
   description: string;
   technologies: string[];
   image: string;
+  domain: string;
   githubUrl: string;
   projectUrl: string;
+  inDevelopment: boolean;
 }
 import ReactIcon from "@/components/icons/react-icon.svg";
 import GithubLightIcon from "@/components/icons/github-icon-light";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import OpenInNewWindowIcon from "./icons/open-in-new-window-icon.svg";
+import OpenInNewWindowIcon from "./icons/open-in-new-window-icon";
+import NodesIconLight from "./icons/nodes-icon-light";
 
 export const ColumnCard: React.FC<ColumnCardProps> = ({
   title,
   description,
   technologies,
   image,
+  inDevelopment,
+  domain,
   githubUrl,
   projectUrl,
 }) => {
@@ -26,18 +31,74 @@ export const ColumnCard: React.FC<ColumnCardProps> = ({
         <Image src={ReactIcon} alt="" width={300} />
       </div>
       <div>
-        <div className="text-2xl font-medium my-4 flex space-x-2 overflow-hidden  items-center">
+        <div className="text-2xl font-medium mt-4 mb-2 flex space-x-2 overflow-hidden  items-center">
           <h2>{title}</h2>
-          <a href={projectUrl} target="_blank">
-            <Image alt="" src={OpenInNewWindowIcon} width={20} />
+        </div>
+        <div className="flex space-y-2 justify-center flex-col items-start">
+          {inDevelopment ? (
+            <a
+              href={projectUrl}
+              className="bg-white  
+            rounded-md 
+            text-sm 
+            flex 
+            items-center 
+            space-x-2 
+            px-2 
+            py-1 text-black  
+            fill-black 
+            "
+              target="_blank"
+            >
+              <NodesIconLight width={20} />
+              <div>In Development</div>
+            </a>
+          ) : (
+            <a
+              href={projectUrl}
+              className="bg-white  
+            rounded-md 
+            text-sm 
+            flex 
+            items-center 
+            space-x-2 
+            px-2 
+            py-1 text-black  
+            hover:text-primary 
+            fill-black 
+            hover:fill-primary
+            "
+              target="_blank"
+            >
+              <OpenInNewWindowIcon width={20} />
+              <div>{domain}</div>
+            </a>
+          )}
+
+          <a
+            href={projectUrl}
+            className="bg-white  
+            rounded-md 
+            text-sm 
+            flex 
+            items-center 
+            space-x-2 
+            px-2 
+            py-1 
+            text-black  
+            hover:text-primary 
+            fill-black 
+            hover:fill-primary"
+            target="_blank"
+          >
+            <GithubLightIcon className="fill-inherit" width={20} />
+            <div>Github Repository</div>
           </a>
           <a
             href={githubUrl}
             className=" fill-white hover:fill-secondary"
             target="_blank"
-          >
-            <GithubLightIcon className="fill-inherit"  width={30} />
-          </a>
+          ></a>
         </div>
         <div className="break-words mb-4 text-sm">{description}</div>
       </div>
