@@ -9,7 +9,7 @@ export default function LinkedinIconLight({
 }) {
   return (
     <svg
-      fill="#000000"
+      fill=""
       height={width}
       width={width}
       version="1.1"

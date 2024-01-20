@@ -89,7 +89,7 @@ export const SkillSection: React.FC<SkillSectionProps> = () => {
   ];
   return (
     <div className="max-w-[75%] md:max-w-[65%] xl:max-w-[55%] mx-auto">
-      <h3 className="flex justify-center items-center text-2xl md:text-3xl text-primary font-bold mb-16">
+      <h3 className="flex justify-center items-center text-2xl md:text-5xl text-primary  mb-16  font-anton tracking-wide">
         Technologies and Tools
       </h3>
       <div
@@ -108,15 +108,15 @@ export const SkillSection: React.FC<SkillSectionProps> = () => {
             key={skill.name}
             className="space-y-4 flex flex-col items-center justify-between "
           >
-            <div className="w-20 flex justify-center grow">
+            <div className=" w-20 h-20  md:w-24 md:h-24 p-4 md:px-0 flex justify-center items-center  bg-gray-800 rounded-full">
               <Image
                 src={skill.icon}
-                width={skill.name === "NextJS" ? "70" : "65"}
+                width={skill.name === "NextJS" ? "70" : "55"}
                 alt=""
               />
             </div>
 
-            <h4 className="text-center">{skill.name}</h4>
+            <h4 className="text-center text-white">{skill.name}</h4>
           </div>
         ))}
       </div>

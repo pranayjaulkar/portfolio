@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -17,6 +20,16 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        anton: ["'Anton', sans-serif", ...defaultTheme.fontFamily.sans],
+        sourcecode: [
+          '"Source Code Pro", monospace',
+          ...defaultTheme.fontFamily.sans,
+        ], heading: [
+          '"Heading"',
+          ...defaultTheme.fontFamily.sans,
+        ],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -51,7 +64,8 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        primary: "#6E07F3",
+        primary: { light: "#f1e6ff", DEFAULT: "#6E07F3", dark: "#5600c5" },
+        grey:"#181a1b",
         secondary: "#5BE9B9",
       },
       borderRadius: {
