@@ -52,7 +52,7 @@ export const ProjectSection: React.FC<ProjectSectionProps> = () => {
     {
       title: "Zest",
       description:
-        "Zest is an ecommerce website where you can explore products and create your own store.",
+        "Zest is an ecommerce website where you can create your own stores and manage them using Zest Dashboard.",
       image:
         "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/rhxc61bxxjtkgufybpci.jpg",
       inDevelopment: true,
@@ -76,7 +76,7 @@ export const ProjectSection: React.FC<ProjectSectionProps> = () => {
   return (
     <div>
       <div className="w-full flex justify-center">
-        <h3 className="text-3xl md:text-5xl text-center text-primary mb-4  md:mb-16 font-anton tracking-wide">
+        <h3 className="text-3xl md:text-5xl text-center text-primary mb-4  md:mb-8 font-anton tracking-wide">
           Projects
         </h3>
       </div>

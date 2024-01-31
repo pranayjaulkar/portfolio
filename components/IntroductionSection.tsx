@@ -38,7 +38,7 @@ export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center text-primary font-anton tracking-wide h-12 lg:h-20">
           <span ref={el}></span>
         </h1>
-        <h2 className="mt-4 md:mt-8 text-md md:text-xl max-w-[80%] text-center w-full text-white">
+        <h2 className="mt-4 md:mt-8 text-md md:text-xl max-w-[80%] text-center w-full text-white drop-shadow-2xl " >
           I design and code beautifully simple things, and I love what I do.
         </h2>
       </div>

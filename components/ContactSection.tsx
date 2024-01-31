@@ -72,7 +72,7 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
                 <div className="absolute w-0 hover:w-52 h-20 bg-white "></div>
                 <Button
                   type="submit"
-                  // className="bg-transparent hover:bg-transparent w-full bg-primary text-white hover:text-primary text-md"
+                  className="rounded-none bg-transparent hover:bg-secondary w-full bg-primary text-white hover:text-primary text-md"
                 >
                   <a href="mailTo:jaulkarpranay@gmail.com">Submit</a>
                 </Button>

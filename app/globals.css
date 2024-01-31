@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -89,6 +88,15 @@
   }
 }
 
+.main-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  background-image: url("/keyboard.jpg");
+  background-size: cover;
+}
+
 .slideIn {
   animation: slide-in 1.5s cubic-bezier(0.51, 0.45, 0.21, 0.93);
 }
@@ -106,6 +114,6 @@
   animation: slide-in-right 1.5s cubic-bezier(0.51, 0.45, 0.21, 0.93);
 }
 
-body{
+body {
   background-color: black;
 }
