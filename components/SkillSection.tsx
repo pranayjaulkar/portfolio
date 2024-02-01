@@ -89,7 +89,7 @@ export const SkillSection: React.FC<SkillSectionProps> = () => {
   ];
   return (
     <div className="max-w-[75%] md:max-w-[65%] xl:max-w-[55%] mx-auto">
-      <h3 className="flex justify-center items-center text-2xl md:text-5xl text-primary  mb-16  font-anton tracking-wide">
+      <h3 className="flex justify-center items-center text-4xl md:text-6xl text-primary mb-16 md:mb-24  font-anton tracking-wide">
         Technologies and Tools
       </h3>
       <div

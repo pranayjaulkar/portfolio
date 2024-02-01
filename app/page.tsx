@@ -15,17 +15,17 @@ export default function Home() {
           <IntroductionSection />
         </section>
         <section>
-          <div className="pb-40">
+          <div className="pb-40 md:pb-80">
             <AboutSection />
           </div>
         </section>
         <section>
-          <div className="pb-40">
+          <div className="pb-40 md:pb-80">
             <SkillSection />
           </div>
         </section>
         <section>
-          <div className="pb-40">
+          <div className="pb-40 md:pb-80">
             <ProjectSection />
           </div>
         </section>

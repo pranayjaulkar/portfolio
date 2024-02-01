@@ -26,7 +26,7 @@ export const ColumnCard: React.FC<ColumnCardProps> = ({
   projectUrl,
 }) => {
   return (
-    <div className="mx-4 my-8 h-full overflow-hidden border">
+    <div className="mx-4 mb-16 h-full overflow-hidden border">
       <div className="w-full h-[200px]">
         <div
           className="flex w-full h-full bg-white "
@@ -41,29 +41,31 @@ export const ColumnCard: React.FC<ColumnCardProps> = ({
       </div>
       <div className="w-[350px] text-white border-t border-white p-4 bg-black">
         <div>
-          <div className="text-2xl pt-4 pb-6 flex overflow-hidden text-primary  items-center font-anton tracking-wide">
+          <div className="text-3xl pt-4 pb-6 flex overflow-hidden text-primary  items-center font-anton tracking-wide">
             <h2>{title}</h2>
           </div>
           <div className="flex justify-center flex-col mb-4 items-start">
-            {inDevelopment ? (
-              <div
-                className="bg-primary text-white  rounded-md text-sm flex items-center space-x-2 px-2 py-1   fill-white
-            "
-              >
-                <NodesIconLight width={20} />
-                <div>In Development</div>
-              </div>
-            ) : (
-              <a
-                href={projectUrl}
-                className=" bg-primary hover:bg-primary-dark  text-white hover:underline fill-white rounded-md text-sm flex items-center space-x-2 px-2 py-1 
-            "
-                target="_blank"
-              >
-                <OpenInNewWindowIcon width={20} />
-                <div>{domain}</div>
-              </a>
-            )}
+            <div
+              className={`bg-primary text-white rounded-md text-sm flex items-center space-x-2 px-2 py-1 ${
+                inDevelopment
+                  ? ""
+                  : "fill-white hover:bg-primary-dark hover:underline"
+              }`}
+            >
+              {inDevelopment ? (
+                <>
+                  <NodesIconLight width={20} />
+                  <div>In Development</div>
+                </>
+              ) : (
+                <>
+                  <OpenInNewWindowIcon width={20} />
+                  <a href={projectUrl} target="_blank">
+                    {domain}
+                  </a>
+                </>
+              )}
+            </div>
 
             <a
               href={projectUrl}

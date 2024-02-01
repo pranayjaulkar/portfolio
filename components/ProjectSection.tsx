@@ -75,11 +75,9 @@ export const ProjectSection: React.FC<ProjectSectionProps> = () => {
   ];
   return (
     <div>
-      <div className="w-full flex justify-center">
-        <h3 className="text-3xl md:text-5xl text-center text-primary mb-4  md:mb-8 font-anton tracking-wide">
-          Projects
-        </h3>
-      </div>
+      <h3 className="text-4xl md:text-6xl text-center text-primary mb-16 md:mb-24  font-anton tracking-wide">
+        Projects
+      </h3>
       <div className="flex flex-wrap flex-col md:flex-row justify-center items-center ">
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
