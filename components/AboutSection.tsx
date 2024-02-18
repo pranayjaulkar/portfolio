@@ -1,6 +1,6 @@
 interface AboutSectionProps {}
 
-export const AboutSection: React.FC<AboutSectionProps> = () => {
+const AboutSection: React.FC<AboutSectionProps> = () => {
   return (
     <div className="h-[380px] md:h-[450px]">
       <div className=" h-full bg-primary flex justify-center ">

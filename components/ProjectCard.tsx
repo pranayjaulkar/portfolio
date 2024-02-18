@@ -15,7 +15,7 @@ import Image from "next/image";
 import OpenInNewWindowIcon from "./icons/open-in-new-window-icon";
 import NodesIconLight from "./icons/nodes-icon-light";
 
-export const ColumnCard: React.FC<ColumnCardProps> = ({
+const ColumnCard: React.FC<ColumnCardProps> = ({
   title,
   description,
   technologies,

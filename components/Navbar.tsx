@@ -16,7 +16,7 @@ export const links = [
   { icon: InstagramIcon, url: "https://www.instagram.com/pranay_jaulkar_/" },
 ];
 
-export const Navbar: React.FC<NavbarProps> = () => {
+const Navbar: React.FC<NavbarProps> = () => {
   return (
     <nav className="flex h-[10%] mx-auto max-w-[90%]  md:max-w-[75%] xl:max-w-[60%]">
       <div className="py-8 w-full flex justify-between items-center">

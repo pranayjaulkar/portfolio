@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 
 interface IntroductionSectionProps {}
 
-export const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
+const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
   const el = useRef(null);
 
   useEffect(() => {

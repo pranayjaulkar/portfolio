@@ -88,17 +88,10 @@
   }
 }
 
-.main-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: auto;
-  background-image: url("/keyboard.jpg");
-  background-size: cover;
-}
-
-.slideIn {
-  animation: slide-in 1.5s cubic-bezier(0.51, 0.45, 0.21, 0.93);
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes slide-in-right {
@@ -110,6 +103,29 @@
   }
 }
 
+
+.line {
+  position: absolute;
+  top: 50%;
+  margin-left: 10px;
+  width: 60px;
+  height: 4px;
+  background: #fff;
+  animation: spin 1.5s infinite ease;
+}
+.line:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.line:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+.line:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+
+.slideIn {
+  animation: slide-in 1.5s cubic-bezier(0.51, 0.45, 0.21, 0.93);
+}
 .slideIn-right {
   animation: slide-in-right 1.5s cubic-bezier(0.51, 0.45, 0.21, 0.93);
 }

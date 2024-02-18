@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { links } from "./Navbar";
 import Link from "next/link";
 
-export const ContactSection: React.FC<ContactSectionProps> = () => {
+const ContactSection: React.FC<ContactSectionProps> = () => {
   return (
     <div className="w-full bg-primary p-8 md:p-32 lg:px-60 lg:py-20">
       <h3 className="w-full text-3xl md:text-5xl text-center text-white font-bold mb-10 md:mb-20 font-anton tracking-wide">
