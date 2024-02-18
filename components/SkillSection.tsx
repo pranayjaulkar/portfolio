@@ -19,7 +19,7 @@ import GitIcon from "./icons/git-icon.svg";
 import Image from "next/image";
 interface SkillSectionProps {}
 
-export const SkillSection: React.FC<SkillSectionProps> = () => {
+const SkillSection: React.FC<SkillSectionProps> = () => {
   const skills = [
     {
       icon: ReactIcon,

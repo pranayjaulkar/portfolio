@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 
 interface ProjectSectionProps {}
 
-export const ProjectSection: React.FC<ProjectSectionProps> = () => {
+const ProjectSection: React.FC<ProjectSectionProps> = () => {
   const projects = [
     {
       title: "Yelpcamp",
