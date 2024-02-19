@@ -17,7 +17,7 @@ const BackgroundImage = ({
   const [showImage, setShowImage] = useState(false);
   useEffect(() => {
     fetch(
-      "https://res.cloudinary.com/dphpgb4hg/image/upload/v1708235594/jlm7cc2h12saddbqh2qc.jpg"
+      "https://res.cloudinary.com/dphpgb4hg/image/upload/v1708325275/gviwidbytmqkxutbzgnu.webp"
     )
       .then((res) => res.blob())
       .then((data) => {
