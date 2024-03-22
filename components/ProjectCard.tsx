@@ -7,13 +7,14 @@ interface ColumnCardProps {
   githubUrl: string;
   projectUrl: string;
   inDevelopment: boolean;
+  inView?: boolean;
+  animation: any;
 }
-import ReactIcon from "@/components/icons/react-icon.svg";
-import GithubLightIcon from "@/components/icons/github-icon-light";
+import GithubLightIcon from "@/components/assets/icons/github-icon-light";
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
-import OpenInNewWindowIcon from "./icons/open-in-new-window-icon";
-import NodesIconLight from "./icons/nodes-icon-light";
+import OpenInNewWindowIcon from "./assets/icons/open-in-new-window-icon";
+import NodesIconLight from "./assets/icons/nodes-icon-light";
+import { motion } from "framer-motion";
 
 const ColumnCard: React.FC<ColumnCardProps> = ({
   title,
@@ -24,9 +25,15 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
   domain,
   githubUrl,
   projectUrl,
+  inView,
+  animation,
 }) => {
   return (
-    <div className="mx-4 mb-16 h-full overflow-hidden border">
+    <motion.div
+      {...animation}
+      animate={inView ? animation.animate : ""}
+      className="mx-8 my-16 h-full overflow-hidden border"
+    >
       <div className="w-full h-[200px]">
         <div
           className="flex w-full h-full bg-white "
@@ -103,7 +110,7 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default ColumnCard;

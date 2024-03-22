@@ -1,8 +1,9 @@
 import Image from "next/image";
-import AvatarIcon from "@/components/icons/avatar.svg";
-import DevicesImage from "@/components/images/hero-devices.svg";
+import AvatarIcon from "@/components/assets/icons/avatar.svg";
+import DevicesImage from "@/components/assets/images/hero-devices.svg";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 interface IntroductionSectionProps {}
 
@@ -43,12 +44,14 @@ const IntroductionSection: React.FC<IntroductionSectionProps> = () => {
         </h2>
       </div>
       <div className="w-full mt-auto flex items-end">
-        <Image
-          className="mt-auto mx-auto px-8 md:px-16 lg:px-0  slideIn"
-          src={DevicesImage}
-          width={800}
-          alt=""
-        />
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3, duration: 1.6, type: "spring" }}
+          className="mt-auto mx-auto px-8 md:px-16 lg:px-0"
+        >
+          <Image className="" src={DevicesImage} width={800} alt="" />
+        </motion.div>
       </div>
     </div>
   );

@@ -18,8 +18,8 @@ export default function Home() {
       <BackgroundImage image={image} setImage={setImage} setShowUI={setShowUI}>
         {showUI ? (
           <main className="absolute top-0 left-0 w-screen h-screen overflow-y-scroll overflow-x-hidden">
-            <div className="">
-              <section className="h-[70vh] md:h-[100vh]">
+            <div>
+              <section className="h-[70vh] md:h-[101vh]">
                 <Navbar />
                 <IntroductionSection />
               </section>

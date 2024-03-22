@@ -1,9 +1,10 @@
 "use client";
-import GithubIconLight from "@/components/icons/github-icon-light";
-import TwitterIcon from "@/components/icons/twitter-icon-light";
-import LinkedinIcon from "@/components/icons/linkedin-icon-light";
-import InstagramIcon from "@/components/icons/instagram-icon-light";
+import GithubIconLight from "@/components/assets/icons/github-icon-light";
+import TwitterIcon from "@/components/assets/icons/twitter-icon-light";
+import LinkedinIcon from "@/components/assets/icons/linkedin-icon-light";
+import InstagramIcon from "@/components/assets/icons/instagram-icon-light";
 import Link from "next/link";
+import { motion } from "framer-motion";
 interface NavbarProps {}
 
 export const links = [
@@ -26,12 +27,21 @@ const Navbar: React.FC<NavbarProps> = () => {
         <div className=" flex space-x-2 justify-center items-center">
           {links.map((LinkItem, i) => (
             <Link
+              key={i}
               href={LinkItem.url}
               target="_blank"
-              key={i}
-              className=" fill-primary md:p-2 hover:fill-secondary"
+              className="md:p-2 fill-primary hover:fill-secondary"
             >
-              <LinkItem.icon className="fill-inherit" width={25} />
+              <motion.div
+                initial={{ scale: 1, fill: "rgb(110, 7, 243)" }}
+                whileHover={{
+                  scale: 1.4,
+                  fill: "rgb(91, 233, 185)",
+                }}
+                transition={{ duration: 0.6 }}
+              >
+                <LinkItem.icon className="fill-inherit" width={25} />
+              </motion.div>
             </Link>
           ))}
         </div>{" "}
