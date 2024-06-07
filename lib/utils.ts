@@ -49,12 +49,7 @@ export function getProjects() {
           y: [40, 0],
           opacity: [0, 0, 0.2, 1],
         },
-        whileHover: {
-          scale: 1.05,
-          borderRadius: [0, 16],
-          transition: { duration: 0.5 },
-        },
-        transition: { delay: 0.5, duration: 2, type: "spring" },
+        transition: { delay: 0.5, duration: 1 },
       },
     },
     {
@@ -84,12 +79,7 @@ export function getProjects() {
           y: [-40, 0],
           opacity: [0, 1],
         },
-        whileHover: {
-          scale: 1.05,
-          borderRadius: [0, 16],
-          transition: { duration: 0.5 },
-        },
-        transition: { delay: 0.5, duration: 2, type: "spring" },
+        transition: { delay: 0.5, duration: 1 },
       },
     },
     {
@@ -119,12 +109,7 @@ export function getProjects() {
           y: [40, 0],
           opacity: [0, 1],
         },
-        whileHover: {
-          scale: 1.05,
-          borderRadius: [0, 16],
-          transition: { duration: 0.5 },
-        },
-        transition: { delay: 0.5, duration: 2, type: "spring" },
+        transition: { delay: 0.5, duration: 1 },
       },
     },
   ];

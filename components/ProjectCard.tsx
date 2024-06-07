@@ -32,7 +32,7 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
     <motion.div
       {...animation}
       animate={inView ? animation.animate : ""}
-      className="mx-8 my-16 h-full overflow-hidden border"
+      className="mx-8 my-16 h-full overflow-hidden border rounded-2xl border-gray-700 text-sm"
     >
       <div className="w-full h-[200px]">
         <div
@@ -46,7 +46,10 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
           }}
         ></div>
       </div>
-      <div className="w-[350px] text-white border-t border-white p-4 bg-black">
+      <motion.div
+        whileHover={animation.whileHover}
+        className="w-[350px] text-white border-t border-gray-700 p-4 bg-slate-950"
+      >
         <div>
           <div className="text-3xl pt-4 pb-6 flex overflow-hidden text-primary  items-center font-anton tracking-wide">
             <h2>{title}</h2>
@@ -102,14 +105,14 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
                     : "bg-primary text-white "
                 } hover:${
                   i % 2 === 0 ? "bg-secondary" : "bg-white"
-                } mx-1 rounded-md`}
+                } mx-1 rounded-full`}
               >
                 {technology}
               </Badge>
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

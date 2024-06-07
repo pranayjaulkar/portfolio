@@ -10,42 +10,45 @@ import { useState } from "react";
 
 const ContactSection: React.FC<ContactSectionProps> = () => {
   const [slide, setSlide] = useState(false);
+
   return (
-    <div className="w-full h-screen relative ">
+    <div className="w-full h-[1100px] lg:h-[800px] relative ">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="absolute w-full h-full backdrop-blur-md"
+        transition={{ duration: 1 }}
+        className="absolute w-full h-full backdrop-blur-xl"
       ></motion.div>
-      <div className="absolute p-8 md:p-32 lg:px-60 lg:py-20">
+      <div className="absolute p-8 md:px-32 lg:px-20 xl:px-60 lg:py-12">
         <motion.h3
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, transition: { duration: 2 } }}
-          className="w-full text-3xl md:text-5xl text-center text-white font-bold mb-10 md:mb-20 font-anton tracking-wide"
+          className="w-full text-3xl md:text-5xl text-center text-secondary font-bold mb-10 md:mb-16   font-anton tracking-wide"
         >
           Contact
         </motion.h3>
-        <div className="flex flex-col lg:flex-row lg:justify-between items-center">
+        <div className="flex flex-col lg:flex-row lg:justify-between items-center space-y-10 lg:space-y-0">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { delay: 0.5, duration: 1.5 },
+              transition: { delay: 0.3, duration: 1 },
             }}
             className="w-full lg:w-[60%] xl:w-[40%] mb-20 md:mb-0"
           >
-            <div className="text-xl text-white space-y-4 mb-16">
-              <span className="font-bold text-3xl">Connect with me</span>
+            <div className="text-xl text-white space-y-2 mb-10">
+              <span className="font-bold text-secondary text-3xl">
+                Connect with me
+              </span>
               <p>
                 If you want to know more about me or my work, or if you would
                 just like to say hello, send me a message. I&apos;d love to hear
                 from you.
               </p>
             </div>
-            <form className="space-y-8">
-              <div className="space-y-8">
+            <form className="space-y-6">
+              <div className="space-y-6">
                 <div className=" ">
                   <div className="mb-2">
                     <Label className=" text-white text-lg" htmlFor="name">
@@ -90,16 +93,24 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
                 </div>
               </div>
               <div>
-                <div className="relative border border-white border-opacity-70 overflow-hidden w-40 rounded-none cursor-pointer ">
+                <div
+                  onMouseOver={() => setSlide(true)}
+                  onMouseOut={() => setSlide(false)}
+                  className="relative border border-white border-opacity-70 overflow-hidden w-40 rounded-none cursor-pointer "
+                >
                   <div
-                    style={{ transform: `translateX(${slide ? 0 : -200})` }}
-                    className="absolute w-full h-full"
+                    style={{
+                      transform: `translateX(${slide ? "0px" : "-300px"})`,
+                    }}
+                    className="absolute transition-all duration-300 ease-out bg-primary w-full h-full"
                   ></div>
                   <Button
                     type="submit"
-                    className="rounded-none bg-transparent w-full text-white text-md"
+                    className="rounded-none bg-transparent hover:bg-transparent w-full text-white text-md"
                   >
-                    <a href="mailTo:jaulkarpranay@gmail.com">Submit</a>
+                    <a className="z-10" href="mailTo:jaulkarpranay@gmail.com">
+                      Submit
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -111,7 +122,7 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { delay: 1.5, duration: 1.5 },
+              transition: { delay: 0.3, duration: 1 },
             }}
             className="flex flex-col justify-center items-center  lg:items-end space-y-16 text-center lg:text-end  text-3xl  text-white"
           >
