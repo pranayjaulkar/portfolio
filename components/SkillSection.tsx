@@ -18,7 +18,7 @@ const SkillSection: React.FC<SkillSectionProps> = () => {
     },
     deflate: { borderRadius: ["24px", "30px", "50px", "999px"] },
     inflate: {
-      borderRadius: ["999px", "50px", "30px", "18px"],
+      scale:[1,1.15],
       transition: { duration: 0.3, delay: 0 },
     },
   };
@@ -28,7 +28,7 @@ const SkillSection: React.FC<SkillSectionProps> = () => {
         variants={variants}
         initial="initialFadeIn"
         whileInView="fadeIn"
-        className="flex justify-center items-center text-4xl md:text-6xl text-primary mb-16 md:mb-24  font-anton tracking-wide"
+        className="flex justify-center items-center text-4xl md:text-6xl text-secondary mb-16 md:mb-24 font-anton tracking-wide"
       >
         Technologies and Tools
       </motion.h3>

@@ -111,7 +111,7 @@
   height: 4px;
   background: #fff;
   animation: spin 1.5s infinite ease;
-} 
+}
 .line:nth-of-type(2) {
   animation-delay: 0.1s;
 }
@@ -123,7 +123,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(11, 0, 18);
 }
 
 .overflow-y-scroll::-webkit-scrollbar {

@@ -25,10 +25,8 @@ module.exports = {
         sourcecode: [
           '"Source Code Pro", monospace',
           ...defaultTheme.fontFamily.sans,
-        ], heading: [
-          '"Heading"',
-          ...defaultTheme.fontFamily.sans,
         ],
+        heading: ['"Heading"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -64,8 +62,12 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        primary: { light: "#f1e6ff", DEFAULT: "#6E07F3", dark: "#5600c5" },
-        grey:"#181a1b",
+        primary: {
+          light: "#f1e6ff",
+          DEFAULT: "#6E07F3",
+          dark: "#5600c5",
+        },
+        grey: "#181a1b",
         secondary: "#5BE9B9",
       },
       borderRadius: {
