@@ -9,7 +9,7 @@ const BackgroundImage = ({ children }: BackgroundImageProps) => {
     <div
       className="w-screen h-screen"
       style={{
-        backgroundImage: `url(/keyboard.jpg)`,
+        backgroundImage: `url(/space.jpg)`,
         backgroundSize: "cover",
       }}
     >
