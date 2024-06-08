@@ -45,7 +45,7 @@ const SkillSection: React.FC<SkillSectionProps> = () => {
               variants={variants}
               animate="deflate"
               whileHover="inflate"
-              className=" w-20 h-20  md:w-24 md:h-24 p-4 md:px-0 flex justify-center items-center  bg-gray-800 rounded-full"
+              className=" w-20 h-20  md:w-24 md:h-24 p-4 md:px-0 flex justify-center items-center bg-slate-800 rounded-full"
             >
               <Image
                 src={skill.icon}

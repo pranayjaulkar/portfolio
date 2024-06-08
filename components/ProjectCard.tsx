@@ -51,7 +51,7 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
         className="w-[350px] text-white border-t border-gray-700 p-4 bg-slate-950"
       >
         <div>
-          <div className="text-3xl pt-4 pb-6 flex overflow-hidden text-primary  items-center font-anton tracking-wide">
+          <div className="text-3xl pt-4 pb-6 flex overflow-hidden text-secondary  items-center font-anton tracking-wide">
             <h2>{title}</h2>
           </div>
           <div className="flex justify-center flex-col mb-4 items-start">

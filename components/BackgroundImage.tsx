@@ -1,5 +1,4 @@
 "use client";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface BackgroundImageProps {
   children: React.ReactNode;

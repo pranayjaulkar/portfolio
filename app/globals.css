@@ -76,51 +76,6 @@
   }
 }
 
-@keyframes slide-in {
-  0% {
-    transform: translateX(1500px);
-  }
-  60% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(-2000px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-.line {
-  position: absolute;
-  top: 50%;
-  margin-left: 10px;
-  width: 60px;
-  height: 4px;
-  background: #fff;
-  animation: spin 1.5s infinite ease;
-}
-.line:nth-of-type(2) {
-  animation-delay: 0.1s;
-}
-.line:nth-of-type(3) {
-  animation-delay: 0.2s;
-}
-.line:nth-of-type(4) {
-  animation-delay: 0.3s;
-}
 
 body {
   background-color: rgb(11, 0, 18);

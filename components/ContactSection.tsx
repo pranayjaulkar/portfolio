@@ -102,7 +102,7 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
                     style={{
                       transform: `translateX(${slide ? "0px" : "-300px"})`,
                     }}
-                    className="absolute transition-all duration-300 ease-out bg-primary w-full h-full"
+                    className="absolute transition-all duration-200 ease-out bg-primary w-full h-full"
                   ></div>
                   <Button
                     type="submit"
