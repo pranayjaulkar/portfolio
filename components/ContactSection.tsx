@@ -3,16 +3,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { links } from "./Navbar";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { links } from "@/lib/utils";
 
 const ContactSection: React.FC<ContactSectionProps> = () => {
   const [slide, setSlide] = useState(false);
 
   return (
-    <div className="w-full h-[1100px] lg:h-[800px] relative ">
+    <div className="w-full h-[1200px] lg:h-[800px] relative ">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -38,13 +38,10 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
             className="w-full lg:w-[60%] xl:w-[40%] mb-20 md:mb-0"
           >
             <div className="text-xl text-white space-y-2 mb-10">
-              <span className="font-bold text-secondary text-3xl">
-                Connect with me
-              </span>
+              <span className="font-bold text-secondary text-3xl">Connect with me</span>
               <p>
-                If you want to know more about me or my work, or if you would
-                just like to say hello, send me a message. I&apos;d love to hear
-                from you.
+                If you want to know more about me or my work, or if you would just like to say hello, send me a message.
+                I&apos;d love to hear from you.
               </p>
             </div>
             <form className="space-y-6">
@@ -56,12 +53,7 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
                     </Label>
                   </div>
 
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Enter your name"
-                    className="bg-white rounded-lg "
-                  />
+                  <Input id="name" type="text" placeholder="Enter your name" className="bg-white rounded-lg " />
                 </div>
                 <div className=" ">
                   <div className="mb-2">
@@ -70,12 +62,7 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
                     </Label>
                   </div>
 
-                  <Input
-                    id="email"
-                    type="text"
-                    placeholder="Enter your email"
-                    className="bg-white rounded-lg "
-                  />
+                  <Input id="email" type="text" placeholder="Enter your email" className="bg-white rounded-lg " />
                 </div>
                 <div className=" ">
                   <div className="mb-2">
@@ -84,12 +71,7 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
                     </Label>
                   </div>
 
-                  <Textarea
-                    rows={5}
-                    id="message"
-                    placeholder="Enter your message"
-                    className="bg-white rounded-lg "
-                  />
+                  <Textarea rows={5} id="message" placeholder="Enter your message" className="bg-white rounded-lg " />
                 </div>
               </div>
               <div>
@@ -127,40 +109,25 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
             className="flex flex-col justify-center items-center  lg:items-end space-y-16 text-center lg:text-end  text-3xl  text-white"
           >
             <div>
-              <div className="text-secondary font-anton tracking-wide">
-                Email
-              </div>
-              <div className=" text-lg font-normal">
-                jaulkarpranay@gmail.com
-              </div>
+              <div className="text-secondary font-anton tracking-wide">Email</div>
+              <div className=" text-lg font-normal">jaulkarpranay@gmail.com</div>
             </div>
             <div>
-              <div className="text-secondary font-anton tracking-wide">
-                Address
-              </div>
-              <div className=" text-lg font-normal">
-                Hudkeshwar, Nagpur, Maharashtra, India
-              </div>
+              <div className="text-secondary font-anton tracking-wide">Address</div>
+              <div className=" text-lg font-normal">Hudkeshwar, Nagpur, Maharashtra, India</div>
             </div>
             <div>
-              <div className="text-secondary font-anton tracking-wide">
-                Social Links
-              </div>
+              <div className="text-secondary font-anton tracking-wide">Social Links</div>
               <div className=" flex space-x-2 justify-center items-center">
                 {links.map((LinkItem, i) => (
-                  <Link
-                    href={LinkItem.url}
-                    target="_blank"
-                    key={i}
-                    className=" text-lg font-normal p-2"
-                  >
+                  <Link href={LinkItem.url} target="_blank" key={i} className=" text-lg font-normal p-2">
                     <motion.div
-                      initial={{ scale: 1, fill: "white" }}
+                      initial={{ scale: 1, fill: "rgb(255,255,255)" }}
                       whileHover={{
-                        scale: 1.4,
+                        scale: 1.2,
                         fill: "rgb(91, 233, 185)",
                       }}
-                      transition={{ duration: 0.6 }}
+                      transition={{ duration: 0.2 }}
                     >
                       <LinkItem.icon className="fill-inherit" width={25} />
                     </motion.div>

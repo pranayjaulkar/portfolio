@@ -32,7 +32,7 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
     <motion.div
       {...animation}
       animate={inView ? animation.animate : ""}
-      className="mx-8 my-16 h-full overflow-hidden border rounded-2xl border-gray-700 text-sm"
+      className="mx-auto sm:mx-8 my-16 h-full overflow-hidden border rounded-2xl border-gray-700 text-sm"
     >
       <div className="w-full h-[200px]">
         <div

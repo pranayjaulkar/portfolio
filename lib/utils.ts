@@ -16,6 +16,10 @@ import TypescriptIcon from "../components/assets/icons/typescript-icon.svg";
 import JavascriptIcon from "../components/assets/icons/javascript-icon.svg";
 import CppIcon from "../components/assets/icons/cpp-icon.svg";
 import GitIcon from "../components/assets/icons/git-icon.svg";
+import GithubIconLight from "@/components/assets/icons/github-icon-light";
+import TwitterIcon from "@/components/assets/icons/twitter-icon-light";
+import LinkedinIcon from "@/components/assets/icons/linkedin-icon-light";
+import InstagramIcon from "@/components/assets/icons/instagram-icon-light";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -31,17 +35,7 @@ export function getProjects() {
         "https://res.cloudinary.com/dphpgb4hg/image/upload/v1678196778/chris-holder-uY2UIyO5o5c-unsplash_chc92i.jpg",
       inDevelopment: false,
       domain: "yelpcamp-project-dmx9.onrender.com",
-      technologies: [
-        "ExpressJS",
-        "NodeJS",
-        "Mongodb",
-        "EJS",
-        "Mongoose",
-        "JOI",
-        "Cloudinary",
-        "PassportJS",
-        "Mapbox",
-      ],
+      technologies: ["ExpressJS", "NodeJS", "Mongodb", "EJS", "Mongoose", "JOI", "Cloudinary", "PassportJS", "Mapbox"],
       githubUrl: "https://github.com/pranayjaulkar/yelpcamp",
       projectUrl: "https://yelpcamp-project-dmx9.onrender.com",
       animation: {
@@ -56,8 +50,7 @@ export function getProjects() {
       title: "Memories",
       description:
         "Memories is a social media website for people where they can post pictures of happy or sad moments in their life",
-      image:
-        "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/lckgflnisv8ykxt9wzys.jpg",
+      image: "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/lckgflnisv8ykxt9wzys.jpg",
       inDevelopment: false,
       domain: "memories-lyng.onrender.com",
       technologies: [
@@ -86,8 +79,7 @@ export function getProjects() {
       title: "Zest",
       description:
         "Zest is an ecommerce website where you can create your own stores and manage them using Zest Dashboard.",
-      image:
-        "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/rhxc61bxxjtkgufybpci.jpg",
+      image: "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/rhxc61bxxjtkgufybpci.jpg",
       inDevelopment: true,
       domain: "memories-lyng.onrender.com",
       technologies: [
@@ -184,3 +176,13 @@ export function getSkills() {
     },
   ];
 }
+
+export const links = [
+  { icon: GithubIconLight, url: "https://github.com/pranayjaulkar" },
+  { icon: TwitterIcon, url: "https://twitter.com/pranay_jaulkar_" },
+  {
+    icon: LinkedinIcon,
+    url: "https://www.linkedin.com/in/pranay-jaulkar-30b513206/",
+  },
+  { icon: InstagramIcon, url: "https://www.instagram.com/pranay_jaulkar_/" },
+];
