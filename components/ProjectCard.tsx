@@ -6,7 +6,7 @@ interface ColumnCardProps {
   domain: string;
   githubUrl: string;
   projectUrl: string;
-  inDevelopment: boolean;
+  inDevelopment?: boolean;
   inView?: boolean;
   animation: any;
 }
@@ -78,7 +78,7 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
             </div>
 
             <a
-              href={projectUrl}
+              href={githubUrl}
               className="bg-primary hover:bg-primary-dark text-white hover:underline  rounded-lg text-sm  flex  items-center  space-x-2  px-2  py-1  mt-2  fill-white"
               target="_blank"
             >

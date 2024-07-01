@@ -4,8 +4,8 @@ import ReactIcon from "../components/assets/icons/react-icon.svg";
 import PythonIcon from "../components/assets/icons/python-icon.svg";
 import MongodbIcon from "../components/assets/icons/mongodb-icon.svg";
 import MysqlIcon from "../components/assets/icons/mysql-icon.svg";
-import NextjsIcon from "../components/assets/icons/nextjs-icon.svg";
-import NodejsIcon from "../components/assets/icons/nodejs-icon.svg";
+import NextJSIcon from "../components/assets/icons/nextjs-icon.svg";
+import NodeJSIcon from "../components/assets/icons/nodejs-icon.svg";
 import ReduxIcon from "../components/assets/icons/redux-icon.svg";
 import ExpressIcon from "../components/assets/icons/express-icon.svg";
 import HtmlIcon from "../components/assets/icons/html-icon.svg";
@@ -35,7 +35,7 @@ export function getProjects() {
         "https://res.cloudinary.com/dphpgb4hg/image/upload/v1678196778/chris-holder-uY2UIyO5o5c-unsplash_chc92i.jpg",
       inDevelopment: false,
       domain: "yelpcamp-project-dmx9.onrender.com",
-      technologies: ["ExpressJS", "NodeJS", "Mongodb", "EJS", "Mongoose", "JOI", "Cloudinary", "PassportJS", "Mapbox"],
+      technologies: ["Express.js", "Node.js", "Mongodb", "EJS", "Mongoose", "JOI", "Cloudinary", "Passport.js", "Mapbox"],
       githubUrl: "https://github.com/pranayjaulkar/yelpcamp",
       projectUrl: "https://yelpcamp-project-dmx9.onrender.com",
       animation: {
@@ -54,9 +54,9 @@ export function getProjects() {
       inDevelopment: false,
       domain: "memories-lyng.onrender.com",
       technologies: [
-        "ReactJS",
-        "ExpressJS",
-        "NodeJS",
+        "React.js",
+        "Express.js",
+        "Node.js",
         "Mongodb",
         "Mongoose",
         "Material UI",
@@ -80,22 +80,21 @@ export function getProjects() {
       description:
         "Zest is an ecommerce website where you can create your own stores and manage them using Zest Dashboard.",
       image: "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/rhxc61bxxjtkgufybpci.jpg",
-      inDevelopment: true,
-      domain: "memories-lyng.onrender.com",
+      domain: "zest-store.vercel.app",
       technologies: [
-        "ReactJS",
-        "ExpressJS",
-        "NodeJS",
-        "Mongodb",
-        "Mongoose",
-        "Material UI",
+        "Next.js",
+        "Clerk",
+        "Supabase",
+        "PostgreSQL",
+        "Prisma",
         "Tailwind CSS",
-        "JOI",
+        "Node.js",
+        "Zod",
+        "Zustand",
         "Cloudinary",
-        "JWT",
       ],
-      githubUrl: "https://github.com/pranayjaulkar/ecommerce-website/",
-      projectUrl: "https://memories-lyng.onrender.com",
+      githubUrl: "https://github.com/pranayjaulkar/zest-store/",
+      projectUrl: "https://zest-store.vercel.app/",
       animation: {
         animate: {
           y: [40, 0],
@@ -111,23 +110,23 @@ export function getSkills() {
   return [
     {
       icon: ReactIcon,
-      name: "ReactJS",
+      name: "React.js",
     },
     {
-      icon: NextjsIcon,
-      name: "NextJS",
+      icon: NextJSIcon,
+      name: "Next.js",
     },
     {
       icon: ExpressIcon,
-      name: "ExpressJS",
+      name: "Express.js",
     },
     {
       icon: ReduxIcon,
       name: "Redux Toolkit",
     },
     {
-      icon: NodejsIcon,
-      name: "NodeJS",
+      icon: NodeJSIcon,
+      name: "Node.js",
     },
     {
       icon: MongodbIcon,
