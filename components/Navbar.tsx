@@ -13,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     { name: "Contact", url: "#contact" },
     {
       name: "Resume",
-      url: "https://drive.google.com/file/d/1_vdiAm-WHLNhsmJtfvJtxpWtABJIOhG-/view?usp=drive_link",
+      url: "https://drive.google.com/drive/folders/1PD9FRs24dhu26pOt7IyGkFU2JNvE2sC9",
     },
   ];
   return (
