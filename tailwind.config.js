@@ -20,14 +20,6 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        anton: ["'Anton', sans-serif", ...defaultTheme.fontFamily.sans],
-        sourcecode: [
-          '"Source Code Pro", monospace',
-          ...defaultTheme.fontFamily.sans,
-        ],
-        heading: ['"Heading"', ...defaultTheme.fontFamily.sans],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

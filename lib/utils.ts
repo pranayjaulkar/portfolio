@@ -35,7 +35,17 @@ export function getProjects() {
         "https://res.cloudinary.com/dphpgb4hg/image/upload/v1678196778/chris-holder-uY2UIyO5o5c-unsplash_chc92i.jpg",
       inDevelopment: false,
       domain: "yelpcamp-project-dmx9.onrender.com",
-      technologies: ["Express.js", "Node.js", "Mongodb", "EJS", "Mongoose", "JOI", "Cloudinary", "Passport.js", "Mapbox"],
+      technologies: [
+        "Express.js",
+        "Node.js",
+        "Mongodb",
+        "EJS",
+        "Mongoose",
+        "JOI",
+        "Cloudinary",
+        "Passport.js",
+        "Mapbox",
+      ],
       githubUrl: "https://github.com/pranayjaulkar/yelpcamp",
       projectUrl: "https://yelpcamp-project-dmx9.onrender.com",
       animation: {
@@ -47,12 +57,12 @@ export function getProjects() {
       },
     },
     {
-      title: "Memories",
+      title: "Travelogue",
       description:
-        "Memories is a social media website for people where they can post pictures of happy or sad moments in their life",
+        "Travelogue is a social media platform for sharing travel experiences through posts with captions, images, and comments.",
       image: "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/lckgflnisv8ykxt9wzys.jpg",
       inDevelopment: false,
-      domain: "memories-lyng.onrender.com",
+      domain:"travelogue-6agd.onrender.com",
       technologies: [
         "React.js",
         "Express.js",
@@ -65,8 +75,8 @@ export function getProjects() {
         "Cloudinary",
         "JWT",
       ],
-      githubUrl: "https://github.com/pranayjaulkar/Memories-MERN/",
-      projectUrl: "https://memories-lyng.onrender.com",
+      githubUrl: "https://github.com/pranayjaulkar/Travelogue/",
+      projectUrl: "https://travelogue-6agd.onrender.com",
       animation: {
         animate: {
           y: [-40, 0],

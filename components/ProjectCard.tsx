@@ -16,7 +16,7 @@ import OpenInNewWindowIcon from "./assets/icons/open-in-new-window-icon";
 import NodesIconLight from "./assets/icons/nodes-icon-light";
 import { motion } from "framer-motion";
 
-const ColumnCard: React.FC<ColumnCardProps> = ({
+export default function ColumnCard({
   title,
   description,
   technologies,
@@ -27,39 +27,35 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
   projectUrl,
   inView,
   animation,
-}) => {
+}: ColumnCardProps) {
   return (
-    <motion.div
-      {...animation}
-      animate={inView ? animation.animate : ""}
-      className="mx-auto sm:mx-8 my-16 h-full overflow-hidden border rounded-2xl border-gray-700 text-sm"
-    >
-      <div className="w-full h-[200px]">
+    <div>
+      <motion.div
+        {...animation}
+        animate={inView ? animation.animate : ""}
+        className="h-full w-full overflow-hidden flex flex-col min-w-52 min-h-80 border rounded-2xl border-gray-700"
+      >
         <div
-          className="flex w-full h-full bg-white "
+          className="w-full h-52 bg-white border-none"
           style={{
-            backgroundImage: `url(${image.replace(
-              "upload/",
-              `upload/${"w_500"}/`
-            )})`,
+            backgroundImage: `url(${image.replace("upload/", `upload/${"w_500"}/`)})`,
             backgroundSize: "cover",
           }}
         ></div>
-      </div>
-      <motion.div
-        whileHover={animation.whileHover}
-        className="w-[350px] text-white border-t border-gray-700 p-4 bg-slate-950"
-      >
-        <div>
-          <div className="text-3xl pt-4 pb-6 flex overflow-hidden text-secondary  items-center font-anton tracking-wide">
+        <motion.div
+          whileHover={animation.whileHover}
+          className="w-full grow flex flex-col text-white border-t border-none p-4 bg-slate-900"
+        >
+          {/* Title */}
+          <div className="text-3xl font-bold pb-6 flex overflow-hidden text-secondary  items-center">
             <h2>{title}</h2>
           </div>
-          <div className="flex justify-center flex-col mb-4 items-start">
+
+          {/* Links */}
+          <div className="flex flex-col mb-4">
             <div
-              className={`bg-primary text-white rounded-md text-sm flex items-center space-x-2 px-2 py-1 ${
-                inDevelopment
-                  ? ""
-                  : "fill-white hover:bg-primary-dark hover:underline"
+              className={`bg-primary w-fit text-sm md:text-[16px] text-white rounded-md flex items-center space-x-2 px-2 py-1 ${
+                inDevelopment ? "" : "fill-white hover:bg-primary-dark hover:underline"
               }`}
             >
               {inDevelopment ? (
@@ -79,41 +75,33 @@ const ColumnCard: React.FC<ColumnCardProps> = ({
 
             <a
               href={githubUrl}
-              className="bg-primary hover:bg-primary-dark text-white hover:underline  rounded-lg text-sm  flex  items-center  space-x-2  px-2  py-1  mt-2  fill-white"
+              className="bg-primary w-fit hover:bg-primary-dark text-sm md:text-[16px] text-white hover:underline  rounded-lg flex  items-center  space-x-2  px-2  py-1  mt-2  fill-white"
               target="_blank"
             >
               <GithubLightIcon className="fill-inherit" width={20} />
               <div>Github Repository</div>
             </a>
-            <a
-              href={githubUrl}
-              className=" fill-white hover:fill-secondary"
-              target="_blank"
-            ></a>
           </div>
-          <div className="break-words mb-4  text-md min-h-16">
-            {description}
+
+          {/* Description */}
+          <p className="break-words mb-4 text-sm md:text-[16px] min-h-16">{description}</p>
+
+          {/* Badges */}
+          <div className="flex flex-wrap">
+            {technologies.map((technology, i) => (
+              <div key={technology} className="py-1">
+                <Badge
+                  className={`${i % 2 === 0 ? "bg-secondary text-black  " : "bg-primary text-white "} hover:${
+                    i % 2 === 0 ? "bg-secondary" : "bg-white"
+                  } mx-1 rounded-full`}
+                >
+                  {technology}
+                </Badge>
+              </div>
+            ))}
           </div>
-        </div>
-        <div className="flex flex-wrap">
-          {technologies.map((technology, i) => (
-            <div key={technology} className="py-1">
-              <Badge
-                className={`${
-                  i % 2 === 0
-                    ? "bg-secondary text-black  "
-                    : "bg-primary text-white "
-                } hover:${
-                  i % 2 === 0 ? "bg-secondary" : "bg-white"
-                } mx-1 rounded-full`}
-              >
-                {technology}
-              </Badge>
-            </div>
-          ))}
-        </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
-};
-export default ColumnCard;
+}

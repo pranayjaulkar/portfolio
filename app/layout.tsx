@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const urbanist = Urbanist({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Pranay Jaulkar | Fullstack Developer",
   description: "Portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={urbanist.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

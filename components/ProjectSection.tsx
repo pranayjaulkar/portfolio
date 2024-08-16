@@ -1,32 +1,20 @@
 import { getProjects } from "@/lib/utils";
 import ProjectCard from "./ProjectCard";
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
+import Section from "./Section";
 
-interface ProjectSectionProps {}
-
-const ProjectSection: React.FC<ProjectSectionProps> = () => {
+export default function ProjectSection() {
   const projects = getProjects();
   const ref = useRef(null);
   const inView = useInView(ref);
   return (
-    <div>
-      <motion.h3
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 2 } }}
-        className="text-4xl md:text-6xl text-center text-secondary mb-16 md:mb-8  font-anton tracking-wide"
-      >
-        Projects
-      </motion.h3>
-      <div
-        ref={ref}
-        className="overflow-hidden flex flex-wrap flex-col md:flex-row justify-center items-center "
-      >
+    <Section title="PROJECTS" className="mx-6 sm:mx-36 xl:mx-20 2xl:mx-48">
+      <div ref={ref} className="overflow-hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-12">
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} inView={inView} />
         ))}
       </div>
-    </div>
+    </Section>
   );
-};
-export default ProjectSection;
+}

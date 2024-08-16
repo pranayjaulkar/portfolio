@@ -2,9 +2,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { links } from "@/lib/utils";
-interface NavbarProps {}
 
-const Navbar: React.FC<NavbarProps> = () => {
+export default function Navbar() {
   const sections = [
     { name: "Home", url: "#home" },
     { name: "About", url: "#about" },
@@ -13,14 +12,14 @@ const Navbar: React.FC<NavbarProps> = () => {
     { name: "Contact", url: "#contact" },
     {
       name: "Resume",
-      url: "https://drive.google.com/file/d/10c_6A15Ad4WXfq4dWgiNWFC73Wggl1-j",
+      url: "https://drive.google.com/file/d/1D9_FJkcShGipmZLyk7WYha9Bl43JxDgk/view?usp=sharing",
     },
   ];
   return (
     <div className="hidden md:block fixed top-0 z-50 bg-primary w-full">
       <nav id="#home" className="flex h-[10%] mx-auto max-w-[90%]  md:max-w-[75%] xl:max-w-[65%]">
         <div className="py-6 w-full flex justify-between items-center">
-          <div className="flex text-white md:text-xl  items-center justify-start space-x-6">
+          <div className="flex text-white lg:text-lg  items-center justify-start space-x-6">
             {sections.map((section, i) => {
               return (
                 <Link
@@ -34,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               );
             })}
           </div>
-          <div className=" flex space-x-2 justify-center items-center">
+          <div className="flex space-x-2 justify-center items-center">
             {links.map((LinkItem, i) => (
               <Link key={i} href={LinkItem.url} target="_blank" className="md:p-2 fill-white hover:fill-primary">
                 <motion.div
@@ -54,5 +53,4 @@ const Navbar: React.FC<NavbarProps> = () => {
       </nav>
     </div>
   );
-};
-export default Navbar;
+}

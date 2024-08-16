@@ -4,7 +4,7 @@ interface BackgroundImageProps {
   children: React.ReactNode;
 }
 
-const BackgroundImage = ({ children }: BackgroundImageProps) => {
+export default function BackgroundImage({ children }: BackgroundImageProps) {
   return (
     <div
       className="w-screen h-screen"
@@ -16,5 +16,4 @@ const BackgroundImage = ({ children }: BackgroundImageProps) => {
       {children}
     </div>
   );
-};
-export default BackgroundImage;
+}
