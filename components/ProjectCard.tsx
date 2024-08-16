@@ -1,5 +1,6 @@
 interface ColumnCardProps {
   title: string;
+  isNew: boolean;
   description: string;
   technologies: string[];
   image: string;
@@ -19,6 +20,7 @@ import { motion } from "framer-motion";
 export default function ColumnCard({
   title,
   description,
+  isNew,
   technologies,
   image,
   inDevelopment,
@@ -47,8 +49,12 @@ export default function ColumnCard({
           className="w-full grow flex flex-col text-white border-t border-none p-4 bg-slate-900"
         >
           {/* Title */}
-          <div className="text-3xl font-bold pb-6 flex overflow-hidden text-secondary  items-center">
-            <h2>{title}</h2>
+          <div
+            className="relative text-3xl font-bold pb-6 flex text-secondary  items-center space-x-2 w-fit
+          "
+          >
+            <h2 className="overlfow-hidden">{title}</h2>
+            {isNew && <Badge className="absolute top-0 -right-10 text-xs px-1 py-0.5 text-white hover:text-white">new</Badge>}
           </div>
 
           {/* Links */}
