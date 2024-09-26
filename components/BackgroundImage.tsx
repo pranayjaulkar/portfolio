@@ -9,7 +9,7 @@ export default function BackgroundImage({ children }: BackgroundImageProps) {
     <div
       className="w-screen h-screen"
       style={{
-        backgroundImage: `url(/space.jpg)`,
+        backgroundImage: `url(/space.webp)`,
         backgroundSize: "cover",
       }}
     >
