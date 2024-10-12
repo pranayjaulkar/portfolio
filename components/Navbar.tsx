@@ -12,7 +12,7 @@ export default function Navbar() {
     { name: "Contact", url: "#contact" },
     {
       name: "Resume",
-      url: "https://drive.google.com/file/d/1D9_FJkcShGipmZLyk7WYha9Bl43JxDgk/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1-fmZZfj--tqzvQoCDQYQ3oIpT2PZTVzj/view?usp=drive_link",
     },
   ];
   return (
