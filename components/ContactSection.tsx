@@ -23,9 +23,9 @@ export default function ContactSection() {
         <motion.h3
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, transition: { duration: 2 } }}
-          className="w-full text-4xl md:text-5xl font-black text-center text-secondary mb-10 md:mb-16    "
+          className="w-full text-5xl font-bold text-secondary mb-10"
         >
-          CONTACT
+          Contact
         </motion.h3>
         <div className="flex flex-col lg:flex-row justify-between space-y-10 lg:space-y-0">
           {/* Form */}
@@ -125,8 +125,8 @@ export default function ContactSection() {
             <div>
               <div className="text-secondary font-bold">Social Links</div>
               <div className=" flex space-x-2 justify-center items-center">
-                {links.map((LinkItem, i) => (
-                  <Link href={LinkItem.url} target="_blank" key={i} className=" text-lg font-normal p-2">
+                {links.map((linkItem, i) => (
+                  <Link href={linkItem.url} target="_blank" key={i} className=" text-lg font-normal p-2">
                     <motion.div
                       initial={{ scale: 1, fill: "rgb(255,255,255)" }}
                       whileHover={{
@@ -135,7 +135,7 @@ export default function ContactSection() {
                       }}
                       transition={{ duration: 0.2 }}
                     >
-                      <LinkItem.icon className="fill-inherit" width={25} />
+                      <linkItem.icon className="fill-inherit" width={25} />
                     </motion.div>
                   </Link>
                 ))}

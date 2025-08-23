@@ -6,7 +6,7 @@ export default function Section({
   children,
   className = "",
 }: {
-  title: string;
+  title?: string;
   children: React.ReactNode;
   className?: string;
 }) {
@@ -16,16 +16,11 @@ export default function Section({
   };
   return (
     <motion.section
-      className={cn("mx-10 md:mx-20 lg:mx-40 xl:mx-52 2xl:mx-64 mb-40", className)}
+      className={cn(
+        "mx-10 md:mx-20 lg:mx-40 xl:mx-52 2xl:mx-64 mb-40",
+        className
+      )}
     >
-      <motion.h3
-        variants={variants}
-        initial="initialFadeIn"
-        whileInView="fadeIn"
-        className="flex justify-center items-center text-center font-black text-4xl md:text-5xl text-secondary mb-16 md:mb-24"
-      >
-        {title}
-      </motion.h3>
       {children}
     </motion.section>
   );

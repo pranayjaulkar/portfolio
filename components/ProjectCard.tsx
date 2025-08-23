@@ -1,10 +1,8 @@
 interface ColumnCardProps {
   title: string;
-  isNew: boolean;
   description: string;
   technologies: string[];
   image: string;
-  domain: string;
   githubUrl: string;
   projectUrl: string;
   inDevelopment?: boolean;
@@ -20,11 +18,9 @@ import { motion } from "framer-motion";
 export default function ColumnCard({
   title,
   description,
-  isNew,
   technologies,
   image,
   inDevelopment,
-  domain,
   githubUrl,
   projectUrl,
   inView,
@@ -35,12 +31,15 @@ export default function ColumnCard({
       <motion.div
         {...animation}
         animate={inView ? animation.animate : ""}
-        className="h-full w-full overflow-hidden flex flex-col min-w-52 min-h-80 border rounded-2xl border-gray-700"
+        className="h-full w-full overflow-hidden flex flex-col border rounded-xl border-gray-700"
       >
         <div
-          className="w-full h-52 bg-white border-none"
+          className="w-full h-40 bg-white border-none"
           style={{
-            backgroundImage: `url(${image.replace("upload/", `upload/${"w_500"}/`)})`,
+            backgroundImage: `url(${image.replace(
+              "upload/",
+              `upload/${"w_500"}/`
+            )})`,
             backgroundSize: "cover",
           }}
         ></div>
@@ -49,57 +48,45 @@ export default function ColumnCard({
           className="w-full grow flex flex-col text-white border-t border-none p-4 bg-slate-900"
         >
           {/* Title */}
-          <div
-            className="relative text-3xl font-bold pb-6 flex text-secondary  items-center space-x-2 w-fit
-          "
-          >
+          <div className="relative text-2xl font-bold pb-2 flex text-secondary  items-center space-x-2 w-fit">
             <h2 className="overlfow-hidden">{title}</h2>
-            {isNew && <Badge className="absolute top-0 -right-10 text-xs px-1 py-0.5 text-white hover:text-white">new</Badge>}
           </div>
 
           {/* Links */}
-          <div className="flex flex-col mb-4">
+          <div className="flex flex-col mb-4 space-y-0.5">
             <div
-              className={`bg-primary w-fit text-sm md:text-[16px] text-white rounded-md flex items-center space-x-2 px-2 py-1 ${
-                inDevelopment ? "" : "fill-white hover:bg-primary-dark hover:underline"
+              className={`w-fit text-sm text-white flex items-center space-x-2 py-0.5 ${
+                inDevelopment ? "" : "fill-white hover:underline"
               }`}
             >
-              {inDevelopment ? (
-                <>
-                  <NodesIconLight width={20} />
-                  <div>In Development</div>
-                </>
-              ) : (
-                <>
-                  <OpenInNewWindowIcon width={20} />
-                  <a href={projectUrl} target="_blank">
-                    {domain}
-                  </a>
-                </>
-              )}
+              <a className="hover:fill-secondary hover:scale-125 duration-200 " href={projectUrl} target="_blank">
+                <OpenInNewWindowIcon width={16} />
+              </a>
+              <a
+                href={githubUrl}
+                className="hover:fill-secondary hover:scale-125 duration-200 w-fit text-white hover:underline flex items-center space-x-2 py-0.5 fill-white"
+                target="_blank"
+              >
+                <GithubLightIcon className="fill-inherit" width={16} />
+              </a>
             </div>
-
-            <a
-              href={githubUrl}
-              className="bg-primary w-fit hover:bg-primary-dark text-sm md:text-[16px] text-white hover:underline  rounded-lg flex  items-center  space-x-2  px-2  py-1  mt-2  fill-white"
-              target="_blank"
-            >
-              <GithubLightIcon className="fill-inherit" width={20} />
-              <div>Github Repository</div>
-            </a>
           </div>
 
           {/* Description */}
-          <p className="break-words mb-4 text-sm md:text-[16px] min-h-16">{description}</p>
+          <p className="break-words mb-2 min-h-16 text-sm">{description}</p>
 
           {/* Badges */}
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap space-x-1">
             {technologies.map((technology, i) => (
-              <div key={technology} className="py-1">
+              <div key={technology} className="py-0.5">
                 <Badge
-                  className={`${i % 2 === 0 ? "bg-secondary text-black  " : "bg-primary text-white "} hover:${
+                  className={`${
+                    i % 2 === 0
+                      ? "bg-secondary text-black  "
+                      : "bg-primary text-white "
+                  } hover:${
                     i % 2 === 0 ? "bg-secondary" : "bg-white"
-                  } mx-1 rounded-full`}
+                  } rounded-full py-0`}
                 >
                   {technology}
                 </Badge>

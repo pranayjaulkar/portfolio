@@ -14,7 +14,6 @@ export default function Home() {
         <main className="absolute top-0 left-0 w-screen h-screen overflow-y-scroll overflow-x-hidden">
           <Navbar />
           <IntroductionSection />
-          <AboutSection />
           <SkillSection />
           <ProjectSection />
           <ContactSection />

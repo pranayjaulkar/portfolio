@@ -12,18 +12,21 @@ export default function Navbar() {
     { name: "Contact", url: "#contact" },
     {
       name: "Resume",
-      url: process.env.NEXT_PUBLIC_RESUME_LINK!,
+      url: process.env.NEXT_PUBLIC_RESUME_LINK || "",
     },
   ];
   return (
-    <div className="hidden md:block fixed top-0 z-50 bg-primary w-full">
-      <nav id="#home" className="flex h-[10%] mx-auto max-w-[90%]  md:max-w-[75%] xl:max-w-[65%]">
-        <div className="py-6 w-full flex justify-between items-center">
-          <div className="flex text-white lg:text-lg  items-center justify-start space-x-6">
+    <div className="hidden md:block w-full fixed top-0 z-50">
+      <nav
+        id="#home"
+        className="flex mx-auto max-w-[90%] px-4 mt-2 md:max-w-[75%] xl:max-w-[65%]"
+      >
+        <div className="py-1.5 w-full flex justify-between items-center">
+          <div className="flex text-white text-base font-semibold items-center justify-start space-x-6">
             {sections.map((section, i) => {
               return (
                 <Link
-                  className="border-b-2 border-transparent hover:border-white"
+                  className="border-b-2 border-transparent hover:border-white drop-shadow-2xl"
                   key={i}
                   href={section.url}
                   target={section.name === "Resume" ? "_blank" : ""}
@@ -34,8 +37,13 @@ export default function Navbar() {
             })}
           </div>
           <div className="flex space-x-2 justify-center items-center">
-            {links.map((LinkItem, i) => (
-              <Link key={i} href={LinkItem.url} target="_blank" className="md:p-2 fill-white hover:fill-primary">
+            {links.map((linkItem, i) => (
+              <Link
+                key={i}
+                href={linkItem.url}
+                target="_blank"
+                className="md:p-2 fill-white hover:fill-primary"
+              >
                 <motion.div
                   initial={{ scale: 1, fill: "rgb(255,255,255)" }}
                   whileHover={{
@@ -44,7 +52,7 @@ export default function Navbar() {
                   }}
                   transition={{ duration: 0.2 }}
                 >
-                  <LinkItem.icon className="fill-inherit" width={25} />
+                  <linkItem.icon className="fill-inherit" width={20} />
                 </motion.div>
               </Link>
             ))}
