@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const montserrat = Roboto_Mono({
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -11,11 +12,7 @@ export const metadata: Metadata = {
   description: "Portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>{children}</body>

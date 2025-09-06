@@ -20,36 +20,34 @@ export default function SkillSection() {
     },
   };
   return (
-    <Section title="TECHNOLOGIES">
-      <div className="mx-auto max-w-[1200px]">
-        <h3 className="w-full flex text-7xl font-semibold text-white mb-16 items-center">
-          Technologies
-        </h3>
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-9 justify-items-center gap-y-10 gap-x-[100px]">
+    <section className="mx-10 md:mx-20 lg:mx-40 xl:mx-52 2xl:mx-64 mb-80">
+      <div className="ml-auto max-w-[1000px]">
+        <h3 className="w-full flex text-4xl font-semibold text-white mb-16 ml-6 items-center">TECHNOLOGIES</h3>
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-y-8 ">
           {SKILLS.map((skill) => (
             <motion.div
               variants={variants}
               initial="initialScale"
               whileInView="scaleIn"
               key={skill.name}
-              className="space-y-4 flex flex-col items-center"
+              className="space-y-4 flex items-start"
             >
-              <motion.div
-                variants={variants}
-                animate="deflate"
-                whileHover="inflate"
-                className="w-16 h-16 p-3 md:px-0 flex justify-center items-center bg-slate-800 rounded-full"
-              >
-                <Image src={skill.icon} width="35" alt="" />
-              </motion.div>
+              <div className="flex flex-col items-center space-y-4">
+                <motion.div
+                  variants={variants}
+                  animate="deflate"
+                  whileHover="inflate"
+                  className="w-16 h-16 p-3 md:px-0 flex justify-center items-center bg-slate-800 rounded-full"
+                >
+                  <Image src={skill.icon} width="35" alt="" />
+                </motion.div>
 
-              <h4 className="text-center text-white font-semibold drop-shadow-2xl">
-                {skill.name}
-              </h4>
+                <h4 className="text-center text-sm  min-w-32 px-2 py-0.5 text-zinc-300 drop-shadow-2xl">{skill.name}</h4>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

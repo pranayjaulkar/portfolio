@@ -35,9 +35,8 @@ export const PROJECTS = [
   {
     title: "Zest",
     description:
-      "Zest is an ecommerce website where you can create your own stores and manage them using Zest Dashboard.",
-    image:
-      "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/rhxc61bxxjtkgufybpci.jpg",
+      "Zest is a dynamic e-commerce CMS that enables users to create and manage customizable clothing stores with ease. Built on Next.js for both frontend and backend, it integrates Clerk.js for authentication, Stripe for secure payments, and a Supabase + Prisma stack for reliable data management. The platform features a modern, responsive UI powered by ShadCN and Tailwind CSS, while Cloudinary ensures fast and optimized media delivery offering a complete, scalable solution for online store management.",
+    image: "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/rhxc61bxxjtkgufybpci.jpg",
     technologies: [
       "Next.js",
       "Clerk",
@@ -63,9 +62,8 @@ export const PROJECTS = [
   {
     title: "Travelogue",
     description:
-      "Travelogue is a social media platform for sharing travel experiences through posts with captions, images, and comments.",
-    image:
-      "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/lckgflnisv8ykxt9wzys.jpg",
+      "Travelogue is a social platform designed for travelers to share experiences, stories, and visuals through posts, images, and interactive comments. Built with a responsive React.js frontend, it integrates a secure Node.js/Express.js backend powered by JWT-based authentication. Featuring MongoDB for data storage, Redux for state management, and Cloudinary for optimized media delivery, Travelogue provides a smooth, engaging, and community-driven travel sharing experience.",
+    image: "https://res.cloudinary.com/dphpgb4hg/image/upload/v1704609590/lckgflnisv8ykxt9wzys.jpg",
     inDevelopment: false,
     technologies: [
       "React.js",
@@ -93,21 +91,10 @@ export const PROJECTS = [
     title: "Yelpcamp",
     isNew: false,
     description:
-      "Yelpcamp is a social media website for campers where they can share their favorite camping places and comment on them.",
-    image:
-      "https://res.cloudinary.com/dphpgb4hg/image/upload/v1678196778/chris-holder-uY2UIyO5o5c-unsplash_chc92i.jpg",
+      "Movies App is a full-stack CRUD application that enables users to add, update, and manage movie collections while also fetching real-time movie data via the Streaming Availability API. Developed with an Angular frontend and Express.js + MongoDB backend, the app ensures a scalable and interactive experience. It incorporates Cloudinary for media management and Tailwind CSS for a clean, responsive interface, making it both functional and visually appealing.",
+    image: "https://res.cloudinary.com/dphpgb4hg/image/upload/v1678196778/chris-holder-uY2UIyO5o5c-unsplash_chc92i.jpg",
     inDevelopment: false,
-    technologies: [
-      "Express.js",
-      "Node.js",
-      "Mongodb",
-      "EJS",
-      "Mongoose",
-      "JOI",
-      "Cloudinary",
-      "Passport.js",
-      "Mapbox",
-    ],
+    technologies: ["Express.js", "Node.js", "Mongodb", "EJS", "Mongoose", "JOI", "Cloudinary", "Passport.js", "Mapbox"],
     githubUrl: "https://github.com/pranayjaulkar/yelpcamp",
     projectUrl: "https://yelpcamp-project-dmx9.onrender.com",
     animation: {
@@ -146,11 +133,11 @@ export const SKILLS = [
 ];
 
 export const links = [
-  { icon: GithubIconLight, url: "https://github.com/pranayjaulkar" },
-  { icon: TwitterIcon, url: "https://twitter.com/pranay_jaulkar_" },
   {
     icon: LinkedinIcon,
     url: "https://www.linkedin.com/in/pranay-jaulkar-30b513206/",
   },
+  { icon: GithubIconLight, url: "https://github.com/pranayjaulkar" },
+  { icon: TwitterIcon, url: "https://twitter.com/pranay_jaulkar_" },
   { icon: InstagramIcon, url: "https://www.instagram.com/pranay_jaulkar_/" },
 ];

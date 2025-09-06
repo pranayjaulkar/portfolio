@@ -15,14 +15,15 @@ export default function Navbar() {
       url: process.env.NEXT_PUBLIC_RESUME_LINK || "",
     },
   ];
+
   return (
-    <div className="hidden md:block w-full fixed top-0 z-50">
+    <div className="hidden md:block w-full transition-all duration-200 fixed z-50">
       <nav
         id="#home"
-        className="flex mx-auto max-w-[90%] px-4 mt-2 md:max-w-[75%] xl:max-w-[65%]"
+        className="bg-tertiary border border-gray-700 flex mx-auto max-w-[90%] px-4 mt-2 md:max-w-[75%] xl:max-w-[65%]"
       >
         <div className="py-1.5 w-full flex justify-between items-center">
-          <div className="flex text-white text-base font-semibold items-center justify-start space-x-6">
+          <div className="flex text-white text-sm items-center justify-start space-x-6">
             {sections.map((section, i) => {
               return (
                 <Link
@@ -38,12 +39,7 @@ export default function Navbar() {
           </div>
           <div className="flex space-x-2 justify-center items-center">
             {links.map((linkItem, i) => (
-              <Link
-                key={i}
-                href={linkItem.url}
-                target="_blank"
-                className="md:p-2 fill-white hover:fill-primary"
-              >
+              <Link key={i} href={linkItem.url} target="_blank" className="md:p-2 fill-white hover:fill-primary">
                 <motion.div
                   initial={{ scale: 1, fill: "rgb(255,255,255)" }}
                   whileHover={{
