@@ -1,6 +1,10 @@
 import { SKILLS } from "@/lib/utils";
 import { motion } from "framer-motion";
-import Section from "./Section";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 import Image from "next/image";
 
@@ -21,18 +25,19 @@ export default function SkillSection() {
   };
   return (
     <section className="mx-10 md:mx-20 lg:mx-40 xl:mx-52 2xl:mx-64 mb-80">
-      <div className="ml-auto max-w-[1000px]">
-        <h3 className="w-full flex text-4xl font-semibold text-white mb-16 ml-6 items-center">TECHNOLOGIES</h3>
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-y-8 ">
+      <div className="md:ml-auto max-w-[1000px]">
+        <h3 className={`w-full text-center text-2xl md:text-4xl font-semibold text-white mb-16`}>
+          Technologies
+        </h3>
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-y-8">
           {SKILLS.map((skill) => (
             <motion.div
               variants={variants}
               initial="initialScale"
               whileInView="scaleIn"
               key={skill.name}
-              className="space-y-4 flex items-start"
             >
-              <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col space-y-4 items-center">
                 <motion.div
                   variants={variants}
                   animate="deflate"
@@ -42,7 +47,9 @@ export default function SkillSection() {
                   <Image src={skill.icon} width="35" alt="" />
                 </motion.div>
 
-                <h4 className="text-center text-sm  min-w-32 px-2 py-0.5 text-zinc-300 drop-shadow-2xl">{skill.name}</h4>
+                <h4 className="text-center text-sm  min-w-32 px-2 py-0.5 text-zinc-300 drop-shadow-2xl">
+                  {skill.name}
+                </h4>
               </div>
             </motion.div>
           ))}
