@@ -2,10 +2,30 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function ContactForm() {
   const [slide, setSlide] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const subject = `Message from ${formData.name}`;
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0A${formData.message}`;
+
+    window.location.href = `mailto:jaulkarpranay@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${body}`;
+  };
 
   return (
     <div className="flex flex-col">
@@ -27,15 +47,18 @@ export default function ContactForm() {
               I&apos;d love to hear from you.
             </p>
           </div>
-          <form className="flex flex-col space-y-6" action="@mailto:jaulkarpranay@gmail.com">
+
+          {/* Form */}
+          <form className="flex flex-col space-y-6" onSubmit={handleSubmit}>
             <div className="text-zinc-200 text-sm space-y-6">
               <div className="flex flex-col space-y-2">
                 <label htmlFor="name">Name</label>
-
                 <Input
                   id="name"
                   type="text"
                   placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="bg-tertiary outline-none border border-gray-700 rounded-lg "
                 />
               </div>
@@ -43,8 +66,10 @@ export default function ContactForm() {
                 <label htmlFor="email">Email</label>
                 <Input
                   id="email"
-                  type="text"
+                  type="email"
                   placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="bg-tertiary outline-none border border-gray-700 rounded-lg "
                 />
               </div>
@@ -54,35 +79,30 @@ export default function ContactForm() {
                   rows={5}
                   id="message"
                   placeholder="Enter your message"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="bg-tertiary outline-none border border-gray-700 rounded-lg "
                 />
               </div>
             </div>
-            <div>
+
+            <div
+              onMouseOver={() => setSlide(true)}
+              onMouseOut={() => setSlide(false)}
+              className="relative border border-primary border-opacity-70 overflow-hidden w-40 cursor-pointer rounded-full"
+            >
               <div
-                onMouseOver={() => setSlide(true)}
-                onMouseOut={() => setSlide(false)}
-                className="relative border border-primary border-opacity-70 overflow-hidden w-40 cursor-pointer rounded-full"
+                style={{
+                  transform: `translateX(${slide ? "0px" : "-160px"}) rotate(${slide ? "0deg" : "45deg"})`,
+                }}
+                className="absolute origin-top-right z-0 transition-all duration-200 ease-out bg-primary w-full h-52"
+              ></div>
+              <Button
+                type="submit"
+                className="rounded-none bg-transparent hover:bg-transparent w-full text-zinc-300 relative z-20"
               >
-                <div
-                  style={{
-                    transform: `translateX(${slide ? "0px" : "-160px"}) rotate(${slide ? "0deg" : "45deg"})`,
-                  }}
-                  className="absolute origin-top-right z-0 transition-all duration-200 ease-out bg-primary w-full h-52"
-                ></div>
-                <a
-                  className=" w-full h-full block"
-                  onClick={() => console.log("something")}
-                  href="mailTo:jaulkarpranay@gmail.com"
-                >
-                  <Button
-                    type="submit"
-                    className="rounded-none bg-transparent hover:bg-transparent w-full text-zinc-300"
-                  >
-                    <span className="z-20 ">Submit</span>
-                  </Button>
-                </a>
-              </div>
+                Submit
+              </Button>
             </div>
           </form>
         </motion.div>
