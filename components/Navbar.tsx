@@ -18,16 +18,16 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex md:block w-full transition-all duration-200 fixed z-50">
+    <div className="flex md:block w-full transition-all duration-200 fixed z-50  bg-tertiary border-b md:border border-gray-700">
       <nav
         id="#home"
-        className="flex mx-auto w-full px-4 py-1.5 md:mt-2 md:max-w-[75%] xl:max-w-[65%] bg-tertiary border-b md:border border-gray-700 "
+        className="flex mx-auto w-full px-4 md:max-w-[75%] xl:max-w-[65%]"
       >
         <div className="py-1.5 w-full flex justify-between items-center">
           <div className="hidden md:flex text-white text-sm items-center justify-start space-x-6">
             {sections.map((section, i) => (
               <Link
-                className="border-b-2 border-transparent hover:border-white drop-shadow-2xl"
+                className="border-b-2 border-transparent hover:border-white drop-shadow-2xl text-xs"
                 key={i}
                 href={section.url}
                 target={section.name === "Resume" ? "_blank" : ""}
@@ -37,7 +37,7 @@ export default function Navbar() {
             ))}
           </div>
           <div className="w-full md:w-fit flex items-center justify-between">
-            <div className="flex space-x-2 justify-center items-center">
+            <div className="flex space-x-4 justify-center items-center">
               {links.map((linkItem, i) => (
                 <Link
                   key={i}
@@ -59,7 +59,10 @@ export default function Navbar() {
               ))}
             </div>
 
-            <Link href={process.env.NEXT_PUBLIC_RESUME_LINK || ""}>
+            <Link
+              className="md:hidden"
+              href={process.env.NEXT_PUBLIC_RESUME_LINK || ""}
+            >
               <Button className="bg-primary text-white">Resume</Button>
             </Link>
           </div>

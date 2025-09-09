@@ -8,7 +8,7 @@ export default function ProjectSection() {
   const ref = useRef(null);
   const inView = useInView(ref);
   return (
-    <section className="mx-4 md:mx-20 mb-80">
+    <section id="projects" className="mx-4 md:mx-20 mb-80">
       <div className="max-w-[1200px] mx-auto">
         <motion.div
           transition={{ delay: 0.5, duration: 1 }}
@@ -24,7 +24,7 @@ export default function ProjectSection() {
         >
           <h3 className="text-2xl md:text-4xl font-semibold text-white">Projects</h3>
         </motion.div>
-        <div ref={ref} className="overflow-hidden flex flex-col space-y-10 md:space-y-20">
+        <div ref={ref} className="overflow-hidden flex flex-col space-y-12">
           {PROJECTS.map((project) => (
             <ProjectCard key={project.title} {...project} inView={inView} />
           ))}

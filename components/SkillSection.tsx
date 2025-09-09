@@ -24,8 +24,8 @@ export default function SkillSection() {
     },
   };
   return (
-    <section className="mx-4 md:mx-20 mb-80">
-      <div className="md:ml-auto max-w-[1000px]">
+    <section id="skills" className="mx-4 md:mx-20 mb-80">
+      <div className="md:ml-auto max-w-[1000px] xl:mr-28 2xl:mr-48">
         <h3 className={`w-full text-center text-2xl md:text-4xl font-semibold text-white mb-16`}>
           Technologies
         </h3>
