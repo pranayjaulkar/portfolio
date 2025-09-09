@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex md:block w-full transition-all duration-200 fixed z-50  bg-tertiary border-b md:border border-gray-700">
+    <div style={{background:"linear-gradient(221deg, #23024d, #07101a)"}} className="flex md:block w-full transition-all duration-200 fixed z-50  bg-tertiary border-b md:border border-gray-700">
       <nav
         id="#home"
         className="flex mx-auto w-full px-4 md:max-w-[75%] xl:max-w-[65%]"
