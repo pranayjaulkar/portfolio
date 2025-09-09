@@ -20,9 +20,9 @@ export default function ProjectSection() {
                 }
               : ""
           }
-          className="flex items-center w-full mb-8 md:mb-14"
+          className="flex items-center w-full mb-10 sm:mb-14"
         >
-          <h3 className="text-2xl md:text-4xl font-semibold text-white">Projects</h3>
+          <h3 className="text-3xl w-full text-center md:text-left md:text-4xl font-semibold text-white">Projects</h3>
         </motion.div>
         <div ref={ref} className="overflow-hidden flex flex-col space-y-12">
           {PROJECTS.map((project) => (

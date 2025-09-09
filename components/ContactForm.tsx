@@ -99,7 +99,7 @@ export default function ContactForm() {
               ></div>
               <Button
                 type="submit"
-                className="rounded-none bg-transparent hover:bg-transparent w-full text-zinc-300 relative z-20"
+                className="rounded-none md:bg-transparent hover:bg-transparent w-full text-zinc-300 relative z-20"
               >
                 Submit
               </Button>

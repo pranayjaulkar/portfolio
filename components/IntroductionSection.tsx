@@ -1,8 +1,5 @@
 import Image from "next/image";
 import AvatarIcon from "@/components/assets/icons/avatar.svg";
-import { motion } from "framer-motion";
-import { links } from "@/lib/utils";
-import Link from "next/link";
 
 export default function IntroductionSection() {
   return (

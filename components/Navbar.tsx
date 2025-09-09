@@ -23,7 +23,7 @@ export default function Navbar() {
         id="#home"
         className="flex mx-auto w-full px-4 md:max-w-[75%] xl:max-w-[65%]"
       >
-        <div className="py-1.5 w-full flex justify-between items-center">
+        <div className="py-2 md:py-1.5 w-full flex justify-between items-center">
           <div className="hidden md:flex text-white text-sm items-center justify-start space-x-6">
             {sections.map((section, i) => (
               <Link
@@ -37,7 +37,7 @@ export default function Navbar() {
             ))}
           </div>
           <div className="w-full md:w-fit flex items-center justify-between">
-            <div className="flex space-x-4 justify-center items-center">
+            <div className="flex flex-row-reverse md:flex-row space-x-reverse md:space-x-px space-x-4 justify-center items-center">
               {links.map((linkItem, i) => (
                 <Link
                   key={i}
@@ -63,7 +63,7 @@ export default function Navbar() {
               className="md:hidden"
               href={process.env.NEXT_PUBLIC_RESUME_LINK || ""}
             >
-              <Button className="bg-primary text-white">Resume</Button>
+              <Button className="bg-primary h-8 text-white">Resume</Button>
             </Link>
           </div>
         </div>
