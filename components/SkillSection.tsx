@@ -15,7 +15,7 @@ export default function SkillSection() {
       scale: [0.8, 1],
       opacity: [0, 1],
       x: ["-30px", "0px"],
-      transition: { duration: 2, type: "spring" },
+      transition: { duration: 1, type: "spring" },
     },
     deflate: { borderRadius: ["24px", "30px", "50px", "999px"] },
     inflate: {
@@ -24,7 +24,7 @@ export default function SkillSection() {
     },
   };
   return (
-    <section className="mx-10 md:mx-20 lg:mx-40 xl:mx-52 2xl:mx-64 mb-80">
+    <section className="mx-4 md:mx-20 mb-80">
       <div className="md:ml-auto max-w-[1000px]">
         <h3 className={`w-full text-center text-2xl md:text-4xl font-semibold text-white mb-16`}>
           Technologies
@@ -42,12 +42,12 @@ export default function SkillSection() {
                   variants={variants}
                   animate="deflate"
                   whileHover="inflate"
-                  className="w-16 h-16 p-3 md:px-0 flex justify-center items-center bg-slate-800 rounded-full"
+                  className="size-14 md:size-16 p-3 md:px-0 flex justify-center items-center bg-slate-800 rounded-full"
                 >
                   <Image src={skill.icon} width="35" alt="" />
                 </motion.div>
 
-                <h4 className="text-center text-sm  min-w-32 px-2 py-0.5 text-zinc-300 drop-shadow-2xl">
+                <h4 className="text-center text-xs md:text-sm  min-w-32 px-2 py-0.5 text-zinc-300 drop-shadow-2xl">
                   {skill.name}
                 </h4>
               </div>
