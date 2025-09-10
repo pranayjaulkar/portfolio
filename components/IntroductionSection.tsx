@@ -24,7 +24,7 @@ export default function IntroductionSection() {
               Pranay Jaulkar.
             </span>
             <span className="text-3xl sm:text-5xl font-black text-secondary ">
-              I build things for the web.
+              I build scalable web solutions.
             </span>
             <span className="max-w-[800px]">
               I&apos;m a self-taught web developer with experience in designing
