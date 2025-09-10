@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import OpenInNewWindowIcon from "./assets/icons/open-in-new-window-icon";
 import { links } from "@/lib/utils";
 import { Button } from "./ui/button";
 
@@ -18,33 +19,29 @@ export default function Navbar() {
   ];
 
   return (
-    <div style={{background:"linear-gradient(221deg, #23024d, #07101a)"}} className="flex md:block w-full transition-all duration-200 fixed z-50  bg-tertiary border-b md:border border-gray-700">
-      <nav
-        id="#home"
-        className="flex mx-auto w-full px-4 md:max-w-[75%] xl:max-w-[65%]"
-      >
+    <div
+      style={{ background: "linear-gradient(221deg, #23024d, #0f0c28)" }}
+      className="flex md:block w-full transition-all duration-200 fixed z-50  bg-tertiary border-b border-gray-700"
+    >
+      <nav id="#home" className="flex mx-auto w-full px-4 md:max-w-[75%] xl:max-w-[65%]">
         <div className="py-2 md:py-1.5 w-full flex justify-between items-center">
           <div className="hidden md:flex text-white text-sm items-center justify-start space-x-6">
             {sections.map((section, i) => (
               <Link
-                className="border-b-2 border-transparent hover:border-white drop-shadow-2xl text-xs"
+                className="border-b-[1px] border-transparent hover:border-white drop-shadow-2xl text-xs flex items-center space-x-2"
                 key={i}
                 href={section.url}
                 target={section.name === "Resume" ? "_blank" : ""}
               >
                 {section.name}
+                {section.name === "Resume" && <OpenInNewWindowIcon className="fill-white ml-2" width={14} />}
               </Link>
             ))}
           </div>
           <div className="w-full md:w-fit flex items-center justify-between">
             <div className="flex flex-row-reverse md:flex-row space-x-reverse md:space-x-px space-x-4 justify-center items-center">
               {links.map((linkItem, i) => (
-                <Link
-                  key={i}
-                  href={linkItem.url}
-                  target="_blank"
-                  className="md:p-2 fill-white hover:fill-primary"
-                >
+                <Link key={i} href={linkItem.url} target="_blank" className="md:p-2 fill-white hover:fill-primary">
                   <motion.div
                     initial={{ scale: 1, fill: "rgb(255,255,255)" }}
                     whileHover={{
@@ -59,10 +56,7 @@ export default function Navbar() {
               ))}
             </div>
 
-            <Link
-              className="md:hidden"
-              href={process.env.NEXT_PUBLIC_RESUME_LINK || ""}
-            >
+            <Link className="md:hidden" href={process.env.NEXT_PUBLIC_RESUME_LINK || ""}>
               <Button className="bg-primary h-8 text-white">Resume</Button>
             </Link>
           </div>

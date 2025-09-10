@@ -8,7 +8,6 @@ interface ColumnCardProps {
   inView?: boolean;
 }
 import GithubLightIcon from "@/components/assets/icons/github-icon-light";
-import { Badge } from "@/components/ui/badge";
 import OpenInNewWindowIcon from "./assets/icons/open-in-new-window-icon";
 import { motion } from "framer-motion";
 
@@ -32,7 +31,7 @@ export default function ColumnCard({
             }
           : ""
       }
-      className="max-w-[1000px] md:h-[400px] lg:h-[320px] xl:h-[300px] overflow-hidden border border-gray-700 flex flex-col md:flex-row items-center"
+      className="max-w-[1000px] md:h-[400px] lg:h-[350px] overflow-hidden border border-gray-700 flex flex-col md:flex-row items-center"
     >
       {
         //  =====================  Background IMage  =====================
@@ -51,14 +50,8 @@ export default function ColumnCard({
           <h2 className="overlfow-hidden">{title}</h2>
           {/* Links */}
           <div className="flex flex-col space-y-0.5">
-            <div
-              className={`w-fit text-sm  flex items-center space-x-2 py-0.5 fill-zinc-300 hover:underline`}
-            >
-              <a
-                className="hover:fill-secondary hover:scale-125 duration-200 "
-                href={projectUrl}
-                target="_blank"
-              >
+            <div className={`w-fit text-sm  flex items-center space-x-2 py-0.5 fill-zinc-300 hover:underline`}>
+              <a className="hover:fill-secondary hover:scale-125 duration-200 " href={projectUrl} target="_blank">
                 <OpenInNewWindowIcon width={16} />
               </a>
               <a
@@ -73,25 +66,13 @@ export default function ColumnCard({
         </div>
 
         {/* Description */}
-        <p className="break-words text-zinc-300 text-xs leading-5">
-          {description}
-        </p>
+        <p className="break-words text-zinc-300 text-xs leading-5 mb-auto">{description}</p>
 
         {/* Badges */}
-        <div className="flex flex-wrap space-x-1">
+        <div className="flex flex-wrap space-x-2">
           {technologies.map((technology, i) => (
-            <div key={technology} className="py-0.5">
-              <Badge
-                className={`${
-                  i % 2 === 0
-                    ? "bg-secondary text-black  "
-                    : "bg-primary text-white "
-                } hover:${
-                  i % 2 === 0 ? "bg-secondary" : "bg-white"
-                } rounded-full py-0`}
-              >
-                {technology}
-              </Badge>
+            <div className="py-1.5">
+              <span className="text-xs border px-3 py-1 border-gray-700 text-secondary">{technology}</span>
             </div>
           ))}
         </div>

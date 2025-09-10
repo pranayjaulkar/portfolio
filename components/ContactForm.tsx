@@ -22,9 +22,7 @@ export default function ContactForm() {
     const subject = `Message from ${formData.name}`;
     const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0A${formData.message}`;
 
-    window.location.href = `mailto:jaulkarpranay@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${body}`;
+    window.location.href = `mailto:jaulkarpranay@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
   };
 
   return (
@@ -42,7 +40,7 @@ export default function ContactForm() {
         >
           <div className="flex flex-col space-y-6 mb-10">
             <span className="text-secondary font-bold text-4xl">Connect with me</span>
-            <p className="text-sm text-zinc-200">
+            <p className="text-sm text-zinc-300">
               If you want to know more about me or my work, or if you would just like to say hello, send me a message.
               I&apos;d love to hear from you.
             </p>
@@ -50,7 +48,7 @@ export default function ContactForm() {
 
           {/* Form */}
           <form className="flex flex-col space-y-6" onSubmit={handleSubmit}>
-            <div className="text-zinc-200 text-sm space-y-6">
+            <div className="text-zinc-300 text-sm space-y-6">
               <div className="flex flex-col space-y-2">
                 <label htmlFor="name">Name</label>
                 <Input
@@ -91,18 +89,12 @@ export default function ContactForm() {
               onMouseOut={() => setSlide(false)}
               className="relative border border-primary border-opacity-70 overflow-hidden w-40 cursor-pointer rounded-full"
             >
-              <div
-                style={{
-                  transform: `translateX(${slide ? "0px" : "-160px"}) rotate(${slide ? "0deg" : "45deg"})`,
-                }}
-                className="absolute origin-top-right z-0 transition-all duration-200 ease-out bg-primary w-full h-52"
-              ></div>
               <Button
                 type="submit"
-                className="rounded-none md:bg-transparent hover:bg-transparent w-full text-zinc-300 relative z-20"
+                className="rounded-none bg-primary cursor-pointer w-full text-white relative z-20"
               >
-                Submit
-              </Button>
+                Contact
+              </Button>{" "}
             </div>
           </form>
         </motion.div>
